@@ -23,7 +23,7 @@ function main () {
     console.log(`For ID ${id}`)
     console.log('Item: ', NookExchangeItems.get(id))
     console.log('Adjectives: ', NookExchangeAdjectives.get(id))
-    console.log('es-eu translations: ', OldTranslations.get('es-eu')?.items[id])
+    console.log('es-eu translations: ', OldTranslations.get('es-eu')?.items.get(id))
     console.log()
   }
 }

@@ -26,15 +26,15 @@ export interface Items {
 // and asserts the results of JSON.parse at runtime
 export class Convert {
   public static toItems (json: string): Map<number, Items> {
-    return itemsArrayToItemsMap(cast(JSON.parse(json), a(r('Items'))))
+    return oldToNew(cast(JSON.parse(json), a(r('Items'))))
   }
 
   public static itemsToJson (value: Map<number, Items>): string {
-    return JSON.stringify(uncast(itemsMapToItemsArray(value), a(r('Items'))), null, 2)
+    return JSON.stringify(uncast(newToOld(value), a(r('Items'))), null, 2)
   }
 }
 
-function itemsArrayToItemsMap (items : Items[]) : Map<number, Items> {
+function oldToNew (items : Items[]) : Map<number, Items> {
   const result = new Map<number, Items>()
   items.forEach(item => {
     result.set(item.id, item)
@@ -42,7 +42,7 @@ function itemsArrayToItemsMap (items : Items[]) : Map<number, Items> {
   return result
 }
 
-function itemsMapToItemsArray (items : Map<number, Items>) : Items[] {
+function newToOld (items : Map<number, Items>) : Items[] {
   const result = Array.from(items.values())
   return result.sort((a, b) => a.name.localeCompare(b.name))
 }
