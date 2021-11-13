@@ -57,13 +57,13 @@ function oldToNew (value : OldTranslations) : Translations {
 function newToOld (value : Translations) : OldTranslations {
   // Parse items
   const items : { [key: string]: Array<Array<string[] | string> | string> } = {}
-  for (const [k, v] of Array.from(value.items.entries())) {
+  for (const [k, v] of value.items.entries()) {
     items[k] = v.adjectives ? [v.item, v.adjectives] : [v.item]
   }
 
   // Parse materials
   const materials : { [key: string]: string } = {}
-  for (const [k, v] of Array.from(value.materials.entries())) {
+  for (const [k, v] of value.materials.entries()) {
     materials[k] = v
   }
 

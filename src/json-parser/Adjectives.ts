@@ -32,7 +32,7 @@ function oldToNew (adjectives : oldAdjectives) : Map<number, adjectives> {
 
 function newToOld (adjectives : Map<number, adjectives>) : oldAdjectives {
   const result : oldAdjectives = {}
-  for (const [k, v] of Array.from(adjectives.entries())) {
+  for (const [k, v] of adjectives.entries()) {
     result[k] = v
   }
   return result
