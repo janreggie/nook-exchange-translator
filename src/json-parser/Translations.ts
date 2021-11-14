@@ -7,6 +7,8 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
+import { readFileSync } from 'fs'
+
 interface Translation {
   item: string,
   adjectives?: Array<string[]|string>
@@ -26,6 +28,10 @@ interface OldTranslations {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
+  public static fileToTranslations (filename : string) : Translations {
+    return Convert.toTranslations(readFileSync(filename).toString())
+  }
+
   public static toTranslations (json: string): Translations {
     return oldToNew(cast(JSON.parse(json), r('Translations')))
   }

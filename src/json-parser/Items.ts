@@ -7,6 +7,8 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
+import { readFile, readFileSync } from 'fs'
+
 export interface Items {
     id: number;
     name: string;
@@ -25,6 +27,10 @@ export interface Items {
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
+  public static fileToItems (filename : string) : Map<number, Items> {
+    return Convert.toItems(readFileSync(filename).toString())
+  }
+
   public static toItems (json: string): Map<number, Items> {
     return oldToNew(cast(JSON.parse(json), a(r('Items'))))
   }
