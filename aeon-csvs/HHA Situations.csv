@@ -1,0 +1,47 @@
+Id,EUde,EUen,EUit,EUnl,EUru,EUfr,EUes,USen,USfr,USes,JPja,KRko,TWzh,CNzh
+001,Outdoor,outdoors,all'aria aperta,de buitenlucht,Пикник,extérieur,al aire libre,outdoors,extérieur,al aire libre,アウトドア,아웃도어,戶外,户外
+002,Meer,ocean,nell'oceano,de oceaan,Океан,océanique,en el mar,ocean,océanique,en el mar,うみ,바다,大海,大海
+003,Büro,office,in un ufficio,een kantoor,Офис,bureau,en una oficina,office,bureau,en una oficina,オフィス,오피스,辦公室,办公室
+004,Laden,shop,in un negozio,een winkel,Магазин,magasin,en un negocio,shop,magasin,en un negocio,おみせ,가게,商店,商店
+005,Musik,music,a teatro,muziek,Музыка,musical,en un conservatorio,music,musical,en un conservatorio,おんがく,음악,音樂,音乐
+006,Schule,school,in una scuola,een school,Школа,école,en una escuela,school,école,en una escuela,がっこう,학교,學校,学校
+007,Werkstatt,workshop,in un laboratorio,een werkplaats,Мастерская,atelier,en un taller,workshop,atelier,en un taller,ガレージ,차고,車庫,车库
+008,Küche,kitchen,in una cucina,een keuken,Кухня,cuisine,en una cocina,kitchen,cuisine,en una cocina,キッチン,부엌,廚房,厨房
+009,Kinderzimmer,child's room,nella cameretta di un bimbo,een kinderkamer,Детская,chambre d'enfant,en un cuarto infantil,child's room,chambre d'enfant,en un cuarto infantil,こどもべや,놀이방,兒童房,儿童房
+010,Stadtgebäude,facility,in un edificio pubblico,een publieke ruimte,Учреждение,institution,en una instalación pública,facility,institution,en un mercado de pulgas,しせつ,시설,設施,设施
+011,Studierzimmer,den,in uno studio,een studiekamer,Кабинет,ministre,en un despacho,den,ministre,en un despacho,しょさい,서재,書房,书房
+012,Fernost,harmonious,in una casa armoniosa,harmonie,Гармония,harmonieux,en Oriente,harmonious,harmonieux,en el Oriente,とうようふう,동양풍,東洋風,东洋风
+013,Party,party,a una festa,een feest,Вечеринка,festif,en una fiesta,party,festif,en una fiesta,パーティー,파티,派對,派对
+014,Badezimmer,bathroom,in una stanza da bagno,een badkamer,Ванная,salle de bains,en un cuarto de baño,bathroom,salle de bains,en un cuarto de baño,バス・トイレ,욕실/화장실,浴室‧廁所,浴室·厕所
+015,Fitness,fitness,in una palestra,een sportschool,Фитнес,fitness,en un gimnasio,fitness,fitness,en un gimnasio,フィットネス,피트니스,健身,健身
+016,Eiseskälte,freezing cold,su un ghiacciaio,de vrieskou,Мороз,glacial,en el Polo,freezing cold,glacial,en el Polo,ごっかん,혹한,嚴寒,严寒
+017,Konzert,concert,a un concerto,een concert,Концерт,concert,en un concierto,concert,concert,en un concierto,ライブ,라이브,演唱會,演唱会
+018,Wohnzimmer,living room,in un soggiorno,een woonkamer,Гостиная,salon,en una sala de estar,living room,salon,en una sala de estar,リビング,거실,客廳,客厅
+020,Weltraum,space,nello spazio,het heelal,Космос,spatial,en el espacio,space,spatial,en el espacio,うちゅう,우주,宇宙,宇宙
+021,Kultur,heritage,in un patrimonio culturale,erfgoed,Традиции,patrimoine,en un museo,heritage,patrimoine,en un museo,みんげい,전통 예술,民藝,民间工艺
+022,Horror,horror,in un incubo,een horrorfilm,Ужасы,effrayant,en una peli de miedo,horror,effrayant,en una película de miedo,ホラー,호러,恐怖,恐怖
+023,Garten,garden,in giardino,een tuin,Сад,jardin,en un jardín,garden,jardin,en un jardín,にわ,정원,庭園,庭院
+024,Luxus,expensive,nel lusso sfrenato,luxe,Роскошь,luxueux,en una mansión,expensive,luxueux,en una mansión,リッチ,리치,富裕,富裕
+025,Putzig,fancy,in un mondo fantastico,elegantie,Фантазия,mignon,en un mundo de fantasía,fancy,cute,en un mundo de fantasía,ファンシー,팬시,精美,奇幻
+026,Europa,European,in una città europea,Europa,Европа,européen,en Europa,European,européen,en Europa,ヨーロッパ,유러피언,歐洲,欧洲
+027,Altertum,ancient,nell'antichità,het verre verleden,Древность,ancien,en un algún lugar antiguo,ancient,ancien,en algún lugar antiguo,こだい,고대,古代,古代
+028,Fantasy,fantasy,in un libro fantasy,avontuur,Фэнтези,féérique,viviendo una aventura,fantasy,féérique,viviendo una aventura,ファンタジー,판타지,奇幻,奇幻
+029,Science-Fiction,sci-fi,in un film di fantascienza,science-fiction,Научная фантастика,science-fiction,en una película de ci-fi,sci-fi,science-fiction,en una película de ci-fi,SF,SF 영화,科幻,科幻
+030,Labor,lab,in un centro di ricerca,een laboratorium,Лаборатория,labo,en un laboratorio,lab,labo,en un laboratorio,じっけんしつ,실험실,實驗室,实验室
+031,Krankenhaus,hospital,in un ospedale,een ziekenhuis,Больница,hôpital,en un hospital,hospital,hôpital,en un hospital,びょういん,병원,醫院,医院
+032,Badeanstalt,public bath,alle terme,een badhuis,Общественное спа,bains publiques,en un balneario,public bath,bains publiques,en un balneario,せんとう,목욕탕,澡堂,澡堂
+033,Supermarkt,supermarket,in un supermercato,een supermarkt,Супермаркет,supermarché,en un supermercado,supermarket,supermarché,en un supermercado,スーパー,슈퍼마켓,超市,超市
+034,Restaurant,restaurant,in un ristorante,een restaurant,Ресторан,restaurant,en un restaurante,restaurant,restaurant,en un restaurante,レストラン,레스토랑,餐廳,餐厅
+035,Café,café,in una caffetteria,een café,Кафе,café,en una cafetería,café,café,en un café,カフェ,카페,咖啡店,咖啡店
+036,Boutique,apparel shop,in una boutique,een kledingwinkel,Магазин одежды,boutique de vêtements,en una boutique,apparel shop,boutique de vêtements,en una boutique,アパレルショップ,어패럴 숍,服裝店,服装店
+037,Arcade,arcade,in una sala giochi,een speelhal,Аркадные игры,arcade,en un salón recreativo,arcade,arcade,en un salón recreativo,ゲームセンター,오락실,遊戲中心,游戏中心
+038,Baustelle,construction site,in un cantiere,een bouwplaats,Стройплощадка,chantier,en un edificio en obras,construction site,chantier,en un edificio en obras,こうじげんば,공사 현장,施工現場,施工现场
+039,Sport,sports,a un evento sportivo,sport,Спорт,sports,en un evento deportivo,sports,sports,en un evento deportivo,スポーツ,스포츠,運動,运动
+040,Vor Ort,local,in viaggio,het platteland,Достопримечательности,tourisme,haciendo turismo,local,tourisme,haciendo turismo,ローカル,지역 명물,當地,当地
+041,Stadtleben,city life,in un ambiente cittadino,de grote stad,Городская жизнь,vie urbaine,en la gran ciudad,city life,vie urbaine,en la gran ciudad,まち,시티 라이프,城鎮,城镇
+042,Freizeitpark,amusement park,in un luna park,een pretpark,Парк культуры и отдыха,parc d'attractions,en un parque de atracciones,amusement park,parc d'attractions,en un parque de diversiones,ゆうえんち,놀이공원,遊樂園,游乐园
+043,Lifestyle,stylish,in un ambiente alla moda,een designhotel,Модный образ жизни,tendance,en un hotel de diseño,stylish,tendance,en un hotel de diseño,スタイリッシュ,스타일리시,時髦,时髦
+044,Natur,nature,nella natura,de natuur,Природа,nature,en plena naturaleza,nature,nature,en plena naturaleza,しぜん,자연,自然,自然
+045,Retro,retro,nel passato,vroeger,Ретро,rétro,en el pasado,retro,rétro,en el pasado,レトロ,복고풍,復古,复古
+046,Park,park,in un parco,een park,Парк,parc,en un parque público,park,parc,en un parque público,こうえん,공원,公園,公园
+047,Urlaubsort,resort,in un resort,vakantie,Курорт,station balnéaire,de vacaciones,resort,station balnéaire,de vacaciones,リゾート,리조트,度假區,度假区

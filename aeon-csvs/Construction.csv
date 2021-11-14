@@ -1,0 +1,17 @@
+Id,EUde,EUen,EUit,EUnl,EUru,EUfr,EUes,USen,USfr,USes,JPja,KRko,TWzh,CNzh
+BridgeItem_05912,Steinbrücke,stone bridge,ponte di pietra,stenen brug,каменный мост,pont de pierre,puente de piedra,stone bridge,pont de pierre,puente de piedra,いしのはし,돌 다리,石橋,石桥
+BridgeItem_05913,Hängebrücke,suspension bridge,ponte sospeso,hangbrug,подвесной мост,pont suspendu,puente colgante,suspension bridge,pont suspendu,puente colgante,つりばし,출렁다리,吊橋,吊桥
+BridgeItem_05914,Holzbrücke,wooden bridge,ponte di legno,houten brug,деревянный мост,pont en bois,puente de tablones,wooden bridge,pont en bois,puente de tablones,もくせいのはし,목제 다리,木橋,木桥
+BridgeItem_05915,Backsteinbrücke,brick bridge,ponte di mattoni,bakstenen brug,кирпичный мост,pont en brique,puente de ladrillo,brick bridge,pont en brique,puente de ladrillo,レンガのはし,벽돌 다리,磚塊橋,砖桥
+BridgeItem_05916,Japan-Brücke,zen bridge,ponte giapponese,zenbrug,мост «Дзен»,pont zen,puente de madera,zen bridge,pont zen,puente de madera,わふうのはし,동양풍 다리,和風橋,和风桥
+BridgeItem_05917,Baumstammbrücke,log bridge,ponte di tronchi,boomstammenbrug,мост из поленьев,pont en rondins,puente de troncos,log bridge,pont en rondins,puente de troncos,まるたのはし,통나무 다리,圓木橋,圆木桥
+BridgeItem_05918,Rot-Japan-Brücke,red zen bridge,ponte giapponese rosso,rode zenbrug,красный мост «Дзен»,pont zen rouge,puente de madera rojo,red zen bridge,pont zen rouge,puente de madera rojo,あかいわふうのはし,빨간 동양풍 다리,紅色和風橋,红色和风桥
+BridgeItem_05919,Eisenbrücke,iron bridge,ponte di ferro,ijzeren brug,железный мост,pont en fer,puente de hierro,iron bridge,pont en fer,puente de hierro,てつのはし,철제 다리,鐵橋,铁桥
+SlopeItem_05863,Steintreppe,stone staircase,scala di pietra,stenen trap,каменная лестница,escalier en pierre,escalera de piedra,stone staircase,escalier en pierre,escalera de piedra,いしのかいだん,돌 계단,石樓梯,石台阶
+SlopeItem_05864,Rot-Stahltreppe,red steel staircase,scala di acciaio rosso,rode stalen trap,красная стальн. лестница,escalier en acier rouge,escalera de acero rojo,red steel staircase,escalier en acier rouge,escalera de acero rojo,あかいてっこつかいだん,빨간 철골 계단,紅色鋼筋樓梯,红色钢筋台阶
+SlopeItem_05865,Weiß-Bretterrampe,white-plank ramp,rampa di assi bianche,witte houten helling,рампа из белых досок,pente planches blanches,rampa de tablas blancas,white-plank ramp,pente planches blanches,rampa de tablas blancas,しろいいたのスロープ,하얀 널빤지 슬로프,白色木板斜坡,白色木板斜坡
+SlopeItem_05866,Hangpfad,natural ramp,rampa naturale,natuurlijke helling,естественный склон,pente naturelle,rampa natural,natural ramp,pente naturelle,rampa natural,ナチュラルなスロープ,내추럴 슬로프,自然風斜坡,天然斜坡
+SlopeItem_05867,Baumstammtreppe,log staircase,scala di tronchi,boomstammentrap,лестница из поленьев,escalier en rondins,escalera de troncos,log staircase,escalier en rondins,escalera de troncos,まるたのかいだん,통나무 계단,圓木樓梯,圆木台阶
+SlopeItem_05868,Blau-Bretterrampe,blue-plank ramp,rampa di assi blu,blauwe houten helling,рампа из синих досок,pente planches bleues,rampa de tablas azules,blue-plank ramp,pente planches bleues,rampa de tablas azules,あおいいたのスロープ,파란 널빤지 슬로프,藍色木板斜坡,蓝色木板斜坡
+SlopeItem_05869,Blau-Stahltreppe,blue steel staircase,scala di acciaio blu,blauwe stalen trap,синяя стальная лестница,escalier en acier bleu,escalera de acero azul,blue steel staircase,escalier en acier bleu,escalera de acero azul,あおいてっこつかいだん,파란 철골 계단,藍色鋼筋樓梯,蓝色钢筋台阶
+SlopeItem_05870,Backsteintreppe,brick staircase,scala di mattoni,bakstenen trap,кирпичная лестница,escalier en brique,escalera de ladrillos,brick staircase,escalier en brique,escalera de ladrillos,レンガのかいだん,벽돌 계단,磚塊樓梯,砖台阶

@@ -1,0 +1,50 @@
+Id,EUde,EUen,EUit,EUnl,EUru,EUfr,EUes,USen,USfr,USes,JPja,KRko,TWzh,CNzh
+001,Eisen,iron,ferro,ijzeren stijl,Железо,fer,hierro,iron,fer,hierro,アイアン,아이언,鑄鐵,铸铁
+002,Eisen-Holz,ironwood,legno ferro,ijzeren-houten stijl,ДСП и сталь,bois de fer,universidad,ironwood,bois de fer,universidad,アイアンウッド,아이언 우드,鑄鐵木,铸铁木
+003,Diner,diner,anni '50,jaren 50-stijl,Бистро,années 50,años 50,diner,années 50,años 50,ダイナー,다이너,餐館,美式复古
+004,Antik,antique,vecchio,antieke stijl,Антиквариат,ancienne,antigua,antique,ancienne,antigua,アンティーク,앤티크,古董,古董
+005,Gold,golden,dorato,gouden stijl,Золото,d'or,dorada,golden,d'or,dorada,おうごん,황금,黃金,黄金
+006,Asiatisch,imperial,cinese,keizerlijke stijl,Азия,impériale,dinastía,imperial,impériale,dinastía,オリエンタル,오리엔탈,東方風,东方风
+007,Muschel,shell,conchiglia,schelpenstijl,Ракушки,coquillage,conchas marinas,shell,coquillage,conchas marinas,かいがら,조개,貝殼,贝壳
+008,Pilz,mush,fungo,paddenstoelenstijl,Грибы,champi,hongo,mush,champi,hongo,キノコ,버섯,蘑菇,蘑菇
+009,Bonbon,cute,grazioso,schattige stijl,Милые предметы,mimi,cuqui,cute,cute,adorable,キュート,큐트,可愛,可爱
+010,Bambus,bamboo,bambù,bamboestijl,Бамбук,bambou,bambú,bamboo,bambou,bambú,たけ,대나무,竹子,竹子
+011,Bauklotz,wooden block,blocchi di legno,houtblokstijl,Деревянные блоки,blocs de bois,construcciones,wooden block,blocs de bois,construcciones,つみき,나무블록,積木,积木
+012,Kürbis,spooky,brividi,halloweenstijl,Страшилки,Halloween,calabaza,spooky,frisson,calabaza,ハロウィン,할로윈,萬聖節,万圣节
+013,Obst,fruits,frutta,fruitstijl,Фрукты,fruit,frutal,fruits,fruit,frutal,フルーツ,프루트,水果,水果
+014,Baumstamm,log,tronco,boomstamstijl,Бревна,tronc,leño,log,tronc,troncos,まるた,통나무,圓木,圆木
+015,Holz,wooden,legno,houten stijl,Дерево,bois,madera,wooden,bois,madera,もくせい,목제,木製,木制
+016,Flecht,rattan,rattan,rotanstijl,Ротанг,jonc,ratán,rattan,rotin,mimbre,ラタン,라탄,藤編,藤编
+017,Nostalgie,throwback,fantasia,speelgoedstijl,Детство,nostalgie,fantasía,throwback,nostalgie,fantasía,TOY,TOY,TOY,玩具
+018,Eis,frozen,iceberg,ijsstijl,Лед,arctique,iceberg,frozen,arctique,iceberg,こおり,얼음,冰塊,冰块
+019,Stern,stars,stella,sterrenstijl,Звезды,étoile,estrella,stars,étoile,estrella,ほし,별,星星,星星
+020,Blumen,flowers,fiori,bloemenstijl,Цветы,fleur,flores,flowers,fleur,flores,はな,꽃,花朵,花
+021,Baumfrucht,tree's bounty or leaves,frutti dell'albero e foglie,herfst- en bladerenstijl,Дары леса,fruits des bois ou feuille,frutos del bosque y hojas,tree's bounty or leaves,fruits des bois ou feuille,frutos del bosque y hojas,きのみ・おちば,나무 열매/낙엽,樹果‧落葉,树果·落叶
+022,Kirschblüten,cherry blossoms,ciliegio,kersenbloesemstijl,Вишня в цвету,fleur de cerisier,flor de cerezo,cherry blossoms,fleur de cerisier,flor de cerezo,さくら,벚꽃,櫻花,樱花
+024,Karton,cardboard,scatolone,kartonnen stijl,Картон,carton,cartón,cardboard,carton,cartón,ダンボール,박스,紙箱,纸箱
+025,Mama,motherly,mamma,mama-stijl,Мама,de maman,mamá,motherly,de maman,mamá,はは,엄마,媽媽,妈妈
+026,Festtag,festive,festivo,feeststijl,Праздник,festive,festiva,festive,festive,festiva,クリスマス,크리스마스,聖誕節,圣诞节
+027,Häschentag,Bunny Day,caccia all'uovo,eierstijl,День зайцев,Fête des œufs,Caza del Huevo,Bunny Day,Fête des œufs,Caza del Huevo,イースター,이스터,復活節,复活节
+028,Hochzeit,wedding,fiori d'arancio,trouwstijl,Свадьба,mariage,boda,wedding,mariage,boda,ウェディング,웨딩,婚禮,婚礼
+029,Piraten,pirate,pirata,piratenstijl,Пират,pirate,pirata,pirate,pirate,pirata,かいぞく,해적,海盜,海盗
+030,Nixen,mermaid,sirena,meerminnenstijl,Русалка,sirène,sirena,mermaid,sirène,sirena,マーメイド,머메이드,人魚,人鱼
+032,Schlemmfest,Turkey Day,festival delle primizie,smakenfestijnstijl,День изобилия,Fête du partage,Día del Pavo,Turkey Day,Fête du partage,Día del Pavo,サンクスギビング,하베스트,感恩節,感恩节
+033,Karneval,Festivale,Carnevale,carnavalsstijl,Карнавал,Carnaval,Carnaval,Festivale,Carnaval,Carnaval,カーニバル,카니발,狂歡節,狂欢节
+034,Mario,Mario,Mario,Mario-stijl,Марио,Mario,Mario,Mario,Mario,Mario,マリオ,마리오,瑪利歐,马力欧
+035,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,Hello Kitty,ハローキティ,헬로키티,Hello Kitty,Hello Kitty
+036,Pompompurin,Pompompurin,Pompompurin,Pompompurin,Pompompurin,Pompompurin,Pompompurin,Pompompurin,Pompompurin,Pompompurin,ポムポムプリン,폼폼푸린,Pompompurin,Pompompurin
+037,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,Kiki & Lala,キキ&ララ,리틀트윈스타,Kiki & Lala,Kiki & Lala
+038,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,Cinnamoroll,シナモロール,시나모롤,Cinnamoroll,Cinnamoroll
+039,My Melody,My Melody,My Melody,My Melody,My Melody,My Melody,My Melody,My Melody,My Melody,My Melody,マイメロディ,마이멜로디,My Melody,My Melody
+040,Keroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,Kerokerokeroppi,けろけろけろっぴ,케로케로케로피,Kerokerokeroppi,Kerokerokeroppi
+042,Oldschool,vintage,vecchio stile,vintagestijl,Винтаж,stylé,retro,vintage,vintage,retro,ヴィンテージ,빈티지,懷舊,怀旧
+044,Edel,elegant,elegante,elegante stijl,Элегантность,élégant,elegante,elegant,élégant,elegante,エレガント,엘레강스,優雅,优雅
+045,Western,ranch,country,boerenstijl,Ранчо,ranch,rústica,ranch,ranch,rústica,カントリー,컨트리,鄉村,乡村
+046,Einfach,simple,semplice,sobere stijl,Простота,basique,simple,simple,basique,simple,シンプル,심플한,簡約,简约
+047,Schlamper,sloppy,trasandato,rommelige stijl,Неопрятность,négligé,desorden,sloppy,négligé,desorden,だらしない,칠칠치 못한,邋遢,邋遢
+048,Patchwork,patchwork,patchwork,patchwork stijl,Лоскутное разнообразие,patchwork,retales,patchwork,courtepointe,retazos,パッチワーク,패치워크,拼布,拼布
+049,Kirmes,plaza,da fiera,kermisstijl,Главная площадь,de la place,feria,plaza,de la place,feria,ひろば,광장,廣場,广场
+050,Marokko,Moroccan,marocchino,Marokkaanse stijl,Марокканские мотивы,marocain,marroquí,Moroccan,désert,marroquí,モロッカン,모로칸,摩洛哥,摩洛哥
+052,Cool,cool,spavaldo,strakke stijl,Мода,cool,cosmopolita,cool,chic,cosmopolita,クール,쿨,酷感,酷感
+053,Skandi,Nordic,scandinavo,Scandinavische stijl,Скандинавия,skandi,escandinava,Nordic,skandi,escandinava,ノルディック,노르딕,北歐風,北欧风
+054,Fantasie,dreamy,da sogno,dromerige stijl,Грезы,joli rêve,ensueño,dreamy,joli rêve,ensueño,ゆめかわ,드림 큐트,夢幻可愛,梦幻可爱

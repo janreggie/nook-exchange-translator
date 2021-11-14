@@ -1,0 +1,66 @@
+Id,EUde,EUen,EUit,EUnl,EUru,EUfr,EUes,USen,USfr,USes,JPja,KRko,TWzh,CNzh
+Axe_02100,Axt,axe,ascia,bijl,топор,hache,hacha,axe,hache,hacha,オノ,도끼,斧頭,斧头
+Axe_03068,Wackelaxt,flimsy axe,ascia fragile,breekbare bijl,непрочный топор,hache rudimentaire,hacha endeble,flimsy axe,hache rudimentaire,hacha frágil,ショボいオノ,엉성한 도끼,簡陋斧頭,简陋斧头
+Axe_05856,Steinaxt,stone axe,ascia di pietra,stenen bijl,каменный топор,hache de pierre,hacha de piedra,stone axe,hache de pierre,hacha de piedra,いしのオノ,돌도끼,石斧頭,石斧头
+Axe_09617,Goldaxt,golden axe,ascia d'oro,gouden bijl,золотой топор,hache dorée,hacha de oro,golden axe,hache dorée,hacha de oro,きんのオノ,금도끼,金色斧頭,金色斧头
+Axe_12615,Morschaxt,worn axe,ascia consumata,versleten bijl,видавший виды топор,hache émoussée,hacha maltrecha,worn axe,hache émoussée,hacha maltrecha,こわれかけのオノ,튼튼하지 않은 도끼,快壞掉的斧頭,快要坏掉的斧头
+ChangeStick_02544,Sternenstab,star wand,bacchetta stella,sterrenstaf,палочка со звездой,baguette étoile,varita estrella,star wand,baguette étoile,varita estrella,スターなステッキ,별 지팡이,星星棒,星星棒
+ChangeStick_05083,Hyazinthenstab,hyacinth wand,bacchetta giacinto,hyacintenstaf,палочка с гиацинтом,baguette jacinthe,varita jacinto,hyacinth wand,baguette jacinthe,varita jacinto,ヒヤシンスのステッキ,히아신스 지팡이,風信子棒,风信子棒
+ChangeStick_05084,Anemonenstab,windflower wand,bacchetta anemone,anemonenstaf,палочка с ветреницей,baguette anémone,varita anémona,windflower wand,baguette anémone,varita anémona,アネモネのステッキ,아네모네 지팡이,銀蓮花棒,银莲花棒
+ChangeStick_05085,Tulpenstab,tulip wand,bacchetta tulipano,tulpenstaf,палочка с тюльпаном,baguette tulipe,varita tulipán,tulip wand,baguette tulipe,varita tulipán,チューリップのステッキ,튤립 지팡이,鬱金香棒,郁金香棒
+ChangeStick_05091,Veilchenstab,pansy wand,bacchetta viola,viooltjesstaf,палочка с фиалкой,baguette pensée,varita viola,pansy wand,baguette pensée,varita viola,パンジーのステッキ,팬지 지팡이,三色堇棒,三色堇棒
+ChangeStick_05092,Cosmeastab,cosmos wand,bacchetta cosmea,cosmeastaf,палочка с космеей,baguette cosmos,varita cosmos,cosmos wand,baguette cosmos,varita cosmos,コスモスのステッキ,코스모스 지팡이,波斯菊棒,波斯菊棒
+ChangeStick_05093,Rosenstab,rose wand,bacchetta rosa,rozenstaf,палочка с розой,baguette rose,varita rosa,rose wand,baguette rose,varita rosa,バラのステッキ,장미 지팡이,玫瑰棒,玫瑰棒
+ChangeStick_05094,Lilienstab,lily wand,bacchetta giglio,leliestaf,палочка с лилией,baguette lys,varita lirio,lily wand,baguette lys,varita lirio,ユリのステッキ,백합 지팡이,百合棒,百合棒
+ChangeStick_05095,Chrysanthemenstab,mums wand,bacchetta crisantemo,chrysantenstaf,палочка с хризантемой,baguette chrysanthème,varita crisantemo,mums wand,baguette chrysanthème,varita crisantemo,キクのステッキ,국화 지팡이,菊花棒,菊花棒
+ChangeStick_07584,Stab,wand,bacchetta,toverstaf,палочка,baguette magique,varita,wand,baguette magique,varita,ステッキ,지팡이,棒子,棒子
+ChangeStick_07585,Eisstab,ice wand,bacchetta ghiaccio,ijsstaf,ледяная палочка,baguette glace,varita hielo,ice wand,baguette glace,varita hielo,こおりのステッキ,얼음 지팡이,冰之棒,冰之棒
+ChangeStick_07586,Muschelstab,shell wand,bacchetta conchiglia,schelpenstaf,палочка с ракушкой,baguette coquillage,varita concha marina,shell wand,baguette coquillage,varita caracola,かいがらのステッキ,조개껍데기 지팡이,貝殼棒,贝壳棒
+ChangeStick_07587,Zweigstab,tree-branch wand,bacchetta ramo,wilgenstaf,палочка из ветки,baguette branche,varita rama,tree-branch wand,baguette branche,varita rama,きのえだのステッキ,나뭇가지 지팡이,樹枝棒,树枝棒
+ChangeStick_07588,Pilzstab,mushroom wand,bacchetta fungo,paddenstoelstaf,грибная палочка,baguette champignon,varita champiñón,mushroom wand,baguette champignon,varita champiñón,キノコのステッキ,버섯 지팡이,蘑菇棒,蘑菇棒
+ChangeStick_07589,Kirschblütenstab,cherry-blossom wand,bacchetta ciliegio,kersenbloesemstaf,палочка с сакурой,baguette fleurs de cerisier,varita flor de cerezo,cherry-blossom wand,baguette fleurs de cerisier,varita flor de cerezo,さくらのステッキ,벚꽃 지팡이,櫻花棒,樱花棒
+ChangeStick_07590,Bambusstab,bamboo wand,bacchetta bambù,bamboestaf,палочка из бамбука,baguette bambou,varita bambú,bamboo wand,baguette bambou,varita bambú,たけのステッキ,대나무 지팡이,竹棒,竹棒
+ChangeStick_07591,Goldstab,golden wand,bacchetta d'oro,gouden staf,золотая палочка,baguette d'or,varita dorada,golden wand,baguette d'or,varita dorada,おうごんのステッキ,황금 지팡이,黃金棒,黄金棒
+ChangeStick_07592,Eisenstab,iron wand,bacchetta d'acciaio,ijzeren staf,железная палочка,baguette en fer,varita de hierro,iron wand,baguette en fer,varita de hierro,てつのステッキ,철 지팡이,鐵棒,铁棒
+ChangeStick_08769,Insektenstab,bug wand,bacchetta insetto,insectenstaf,палочка с насекомым,baguette insecte,varita bicho,bug wand,baguette insecte,varita insecto,ムシのステッキ,곤충 지팡이,蟲子棒,虫子棒
+ChangeStick_08770,Fischstab,fish wand,bacchetta pesce,vissenstaf,палочка с рыбой,baguette poisson,varita pez,fish wand,baguette poisson,varita pez,おサカナのステッキ,물고기 지팡이,魚兒棒,鱼儿棒
+ChangeStick_12578,Häschentag-Stab,Bunny Day wand,bacchetta caccia all'uovo,eierstaf,палочка на День зайцев,baguette fête des œufs,varita Caza del Huevo,Bunny Day wand,baguette fête des œufs,varita Caza del Huevo,イースターなステッキ,이스터 지팡이,復活節棒,复活节棒
+ChangeStick_12695,Hochzeitsstab,wedding wand,bacchetta nuziale,trouwstaf,свадебная палочка,baguette de mariage,varita ramo de boda,wedding wand,baguette de mariage,varita ramo de boda,ウェディングなステッキ,웨딩 지팡이,婚禮棒,婚礼棒
+ChangeStick_13173,Kiki-&-Lala-Stab,Kiki & Lala wand,bacchetta Kiki & Lala,Kiki-&-Lala-staf,палочка Kiki & Lala,baguette Kiki & Lala,varita Kiki & Lala,Kiki & Lala wand,baguette Kiki & Lala,varita Kiki & Lala,キキ&ララなステッキ,리틀트윈스타 지팡이,Kiki & Lala棒,Kiki & Lala棒
+ChangeStick_13237,Kürbisstab,spooky wand,bacchetta brividi,pompoenstaf,жуткая палочка,baguette Halloween,varita calabaza,spooky wand,baguette frisson,varita calabaza,ハロウィンなステッキ,할로윈 지팡이,萬聖節棒,万圣节棒
+ChangeStick_14239,Kleeblattstab,shamrock wand,bacchetta trifoglio,klaverstaf,палочка с трилистником,baguette trèfle,varita trébol,shamrock wand,baguette trèfle,varita trébol,シャムロックステッキ,성 패트릭 지팡이,三葉草棒,三叶草棒
+CliffMaker_02543,Plateaulizenz,cliff construction permit,licenza rilievi,klifvergunning,лицензия на скалы,permis falaise,permiso de elevaciones,cliff construction permit,permis falaise,permiso de desniveles,がけこうじライセンス,절벽 공사 허가증,懸崖施工許可證,悬崖施工许可证
+FishingRod_02377,Angel,fishing rod,canna da pesca,hengel,удочка,canne à pêche,caña,fishing rod,canne à pêche,caña,つりざお,낚싯대,釣竿,钓竿
+FishingRod_03084,Wackelangel,flimsy fishing rod,canna da pesca fragile,breekbare hengel,непрочная удочка,canne à pêche rudimentaire,caña endeble,flimsy fishing rod,canne à pêche rudimentaire,caña frágil,ショボいつりざお,엉성한 낚싯대,簡陋釣竿,简陋钓竿
+FishingRod_08471,Fisch-Angel,fish fishing rod,canna pesciolino,vissenhengel,удочка с уткой,canne à pêche poisson,caña pececito,fish fishing rod,canne à pêche poisson,caña pececito,おサカナつりざお,물고기 낚싯대,魚兒釣竿,鱼儿钓竿
+FishingRod_08472,Kinderangel,colorful fishing rod,canna da pesca colorata,kleurrijke hengel,яркая удочка,canne à pêche colorée,caña multicolor,colorful fishing rod,canne à pêche colorée,caña multicolor,カラフルなつりざお,컬러풀 낚싯대,彩色釣竿,彩色钓竿
+FishingRod_08473,Profi-Angel,outdoorsy fishing rod,canna da campeggio,kampeerhengel,походная удочка,canne à pêche de rando,caña de acampada,outdoorsy fishing rod,canne à pêche de rando,caña de campamento,アウトドアなつりざお,아웃도어 낚싯대,戶外釣竿,户外钓竿
+FishingRod_08660,Goldangel,golden rod,canna d'oro,gouden hengel,золотая удочка,canne à pêche dorée,caña de oro,golden rod,canne à pêche dorée,caña de oro,きんのつりざお,금 낚싯대,金色釣竿,金色钓竿
+GroundMaker_03075,Wegelizenz,path construction permit,licenza strade,padenvergunning,лицензия на дороги,permis routes,permiso de caminos,path construction permit,permis routes,permiso de caminos,どうろこうじライセンス,도로 공사 허가증,道路施工許可證,道路施工许可证
+Ladder_02615,Leiter,ladder,scala a pioli,ladder,лестница,échelle,escalera de mano,ladder,échelle,escalera de mano,はしご,사다리,梯子,梯子
+Net_02376,Wackelkescher,flimsy net,retino fragile,breekbaar net,непрочный сачок,filet rudimentaire,red endeble,flimsy net,filet rudimentaire,red frágil,ショボいあみ,엉성한 잠자리채,簡陋捕蟲網,简陋捕虫网
+Net_05784,Kescher,net,retino,net,сачок,filet,red,net,filet,red,あみ,잠자리채,捕蟲網,捕虫网
+Net_08176,Sternkescher,star net,retino stella,sterrennet,сачок со звездой,filet étoilé,red estrella,star net,filet étoilé,red estrella,スターなあみ,별모양 잠자리채,星星捕蟲網,星星捕虫网
+Net_08177,Kinderkescher,colorful net,retino colorato,kleurrijk net,яркий сачок,filet coloré,red colorida,colorful net,filet coloré,red colorida,カラフルなあみ,컬러풀 잠자리채,彩色捕蟲網,彩色捕虫网
+Net_08178,Profi-Kescher,outdoorsy net,retino da campeggio,kampeernet,походный сачок,filet de rando,red de acampada,outdoorsy net,filet de rando,red de campamento,アウトドアなあみ,아웃도어 잠자리채,戶外捕蟲網,户外捕虫网
+Net_08179,Goldkescher,golden net,retino d'oro,gouden net,золотой сачок,filet doré,red de oro,golden net,filet doré,red de oro,きんのあみ,금 잠자리채,金色捕蟲網,金色捕虫网
+RiverMaker_03247,Gewässerlizenz,waterscaping permit,licenza fiumi e laghi,watervergunning,лицензия на реки и озера,permis cours d'eau,permiso de obras fluviales,waterscaping permit,permis cours d'eau,permiso de obras fluviales,かせんこうじライセンス,하천 공사 허가증,河川施工許可證,河流施工许可证
+Shovel_02099,Schaufel,shovel,pala,schep,лопата,pelle,pala,shovel,pelle,pala,スコップ,삽,鏟子,铲子
+Shovel_03082,Wackelschaufel,flimsy shovel,pala fragile,breekbare schep,непрочная лопата,pelle rudimentaire,pala endeble,flimsy shovel,pelle rudimentaire,pala frágil,ショボいスコップ,엉성한 삽,簡陋鏟子,简陋铲子
+Shovel_08574,Goldschaufel,golden shovel,pala d'oro,gouden schep,золотая лопата,pelle dorée,pala de oro,golden shovel,pelle dorée,pala de oro,きんのスコップ,금 삽,金色鏟子,金色铲子
+Shovel_08575,Profi-Schaufel,outdoorsy shovel,pala da campeggio,kampeerschep,походная лопата,pelle de rando,pala de acampada,outdoorsy shovel,pelle de rando,pala de campamento,アウトドアなスコップ,아웃도어 삽,戶外鏟子,户外铲子
+Shovel_08576,Designerschaufel,printed-design shovel,pala con motivo stampato,schep met patroon,лопата с рисунком,pelle design,pala con estampado,printed-design shovel,pelle design,pala con estampado,がらものスコップ,꽃무늬 삽,花紋鏟子,花纹铲子
+Shovel_08577,Kinderschaufel,colorful shovel,pala colorata,kleurrijke schep,яркая лопата,pelle colorée,pala colorida,colorful shovel,pelle colorée,pala colorida,カラフルなスコップ,컬러풀 삽,彩色鏟子,彩色铲子
+SincerityTowel_12856,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん,ぞうきん
+Slingshot_02822,Schleuder,slingshot,fionda,katapult,рогатка,lance-pierre,tirachinas,slingshot,lance-pierre,resortera,パチンコ,새총,彈弓,弹弓
+Slingshot_08578,Goldschleuder,golden slingshot,fionda d'oro,gouden katapult,золотая рогатка,lance-pierre doré,tirachinas de oro,golden slingshot,lance-pierre doré,resortera de oro,きんのパチンコ,금 새총,金色彈弓,金色弹弓
+Slingshot_08579,Profi-Schleuder,outdoorsy slingshot,fionda da campeggio,kampeerkatapult,походная рогатка,lance-pierre de rando,tirachinas de acampada,outdoorsy slingshot,lance-pierre de rando,resortera de campamento,アウトドアなパチンコ,아웃도어 새총,戶外彈弓,户外弹弓
+Slingshot_08580,Kinderschleuder,colorful slingshot,fionda colorata,kleurrijke katapult,яркая рогатка,lance-pierre coloré,tirachinas colorido,colorful slingshot,lance-pierre coloré,resortera colorida,カラフルなパチンコ,컬러풀 새총,彩色彈弓,彩色弹弓
+Timer_03331,Stoppuhr,timer,cronometro,stopwatch,таймер,chrono,cronómetro,timer,chrono,cronómetro,タイマー,타이머,計時器,计时器
+Watering_02379,Gießkanne,watering can,annaffiatoio,gieter,лейка,arrosoir,regadera,watering can,arrosoir,regadera,ジョウロ,물뿌리개,澆花壺,浇花壶
+Watering_03083,Wackelgießkanne,flimsy watering can,annaffiatoio fragile,breekbare gieter,непрочная лейка,arrosoir rudimentaire,regadera endeble,flimsy watering can,arrosoir rudimentaire,regadera frágil,ショボいジョウロ,엉성한 물뿌리개,簡陋澆花壺,简陋浇花壶
+Watering_08533,Goldkanne,golden watering can,annaffiatoio d'oro,gouden gieter,золотая лейка,arrosoir doré,regadera de oro,golden watering can,arrosoir doré,regadera de oro,きんのジョウロ,금 물뿌리개,金色澆花壺,金色浇花壶
+Watering_08534,Kinderkanne,colorful watering can,annaffiatoio colorato,kleurrijke gieter,яркая лейка,arrosoir coloré,regadera colorida,colorful watering can,arrosoir coloré,regadera colorida,カラフルなジョウロ,컬러풀 물뿌리개,彩色澆花壺,彩色浇花壶
+Watering_08535,Elefantenkanne,elephant watering can,annaffiatoio elefante,olifantengieter,лейка-слон,arrosoir éléphant,regadera elefante,elephant watering can,arrosoir éléphant,regadera elefante,ゾウさんジョウロ,코끼리 물뿌리개,大象澆花壺,大象浇花壶
+Watering_08536,Profi-Kanne,outdoorsy watering can,annaffiatoio da campeggio,kampeergieter,походная лейка,arrosoir de rando,regadera de acampada,outdoorsy watering can,arrosoir de rando,regadera de campamento,アウトドアなジョウロ,아웃도어 물뿌리개,戶外澆花壺,户外浇花壶
+WoodenStickTool_04703,Sprungstab,vaulting pole,asta da salto,polsstok,шест,perche,pértiga,vaulting pole,perche,garrocha,たかとびぼう,높이뛰기 장대,撐竿跳竿子,撑杆跳竿子

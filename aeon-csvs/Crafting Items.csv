@@ -1,0 +1,74 @@
+Id,EUde,EUen,EUit,EUnl,EUru,EUfr,EUes,USen,USfr,USes,JPja,KRko,TWzh,CNzh
+AutumnLeaf_07374,Herbstblatt,maple leaf,foglia d'acero,esdoornblad,кленовый лист,feuille d'érable,hoja de arce,maple leaf,feuille d'érable,hoja de arce,もみじのはっぱ,단풍잎,楓葉,枫叶
+AutumnLeaf_07374_pl,Herbstblätter,maple leaves,foglie d'acero,esdoornbladeren,кленовые листья,feuilles d'érable,hojas de arce,maple leaves,feuilles d'érable,hojas de arce,もみじのはっぱ,단풍잎,楓葉,枫叶
+CraftMaterial_02500,Ast,tree branch,ramo,tak,ветка,branche d'arbre,rama,tree branch,branche d'arbre,rama,きのえだ,나뭇가지,樹枝,树枝
+CraftMaterial_02500_pl,Äste,tree branches,rami,takken,ветки,branches d'arbre,ramas,tree branches,branches d'arbre,ramas,きのえだ,나뭇가지,樹枝,树枝
+CraftMaterial_02501,Bambus,bamboo piece,pezzo di bambù,bamboestok,часть бамбука,morceau de bambou,tallo de bambú,bamboo piece,morceau de bambou,tallo de bambú,バンブー,대나무 토막,竹子材料,竹子材料
+CraftMaterial_02501_pl,Bambus,bamboo pieces,pezzi di bambù,bamboestokken,части бамбука,morceaux de bambou,tallos de bambú,bamboo pieces,morceaux de bambou,tallos de bambú,バンブー,대나무 토막,竹子材料,竹子材料
+CraftMaterial_02767,Weichholz,softwood,legno morbido,zachthout,мягкая древесина,bois tendre,tabla flexible,softwood,bois tendre,tabla flexible,やわらかいもくざい,부드러운 목재,軟木材,软木材
+CraftMaterial_02767_pl,Weichholz,softwood,legna morbida,zachthout,мягкая древесина,bois tendre,tablas flexibles,softwood,bois tendre,tablas flexibles,やわらかいもくざい,부드러운 목재,軟木材,软木材
+CraftMaterial_02768,Holz,wood,legno normale,hout,древесина,bois,tabla normal,wood,bois,tabla normal,もくざい,목재,木材,木材
+CraftMaterial_02768_pl,Holz,wood,legna normale,hout,древесина,bois,tablas normales,wood,bois,tablas normales,もくざい,목재,木材,木材
+CraftMaterial_02769,Hartholz,hardwood,legno duro,hardhout,твердая древесина,bois dur,tabla rígida,hardwood,bois dur,tabla rígida,かたいもくざい,단단한 목재,硬木材,硬木材
+CraftMaterial_02769_pl,Hartholz,hardwood,legna dura,hardhout,твердая древесина,bois dur,tablas rígidas,hardwood,bois dur,tablas rígidas,かたいもくざい,단단한 목재,硬木材,硬木材
+CraftMaterial_05727,Eichel,acorn,ghianda,eikel,желудь,gland,bellota,acorn,gland,bellota,どんぐり,도토리,橡栗,橡栗
+CraftMaterial_05727_pl,Eicheln,acorns,ghiande,eikels,желуди,glands,bellotas,acorns,glands,bellotas,どんぐり,도토리,橡栗,橡栗
+CraftMaterial_05728,Zapfen,pine cone,pigna,dennenappel,шишка,pomme de pin,piña,pine cone,pomme de pin,piña,まつぼっくり,솔방울,松果,松果
+CraftMaterial_05728_pl,Zapfen,pine cones,pigne,dennenappels,шишки,pommes de pin,piñas,pine cones,pommes de pin,piñas,まつぼっくり,솔방울,松果,松果
+CraftMaterial_05729,Frühlingsbambus,young spring bamboo,bambù giovane primavera,jonge lentebamboe,весенний бамбук,jeune bambou printemps,tallo de bambú primaveral,young spring bamboo,jeune bambou printemps,tallo de bambú primaveral,はるのわかたけ,봄의 대나무,春筍,春笋
+CraftMaterial_05729_pl,Frühlingsbambus,young spring bamboo,bambù giovani primavera,jonge lentebamboe,весенний бамбук,jeunes bambous printemps,tallos de bambú primaveral,young spring bamboo,jeunes bambous printemps,tallos de bambú primaveral,はるのわかたけ,봄의 대나무,春筍,春笋
+CraftMaterial_05730,Rotschmuck,red ornament,decorazione rossa,rode versiering,красное украшение,boule rouge,adorno rojo,red ornament,boule rouge,adorno rojo,あかいオーナメント,빨간 오너먼트,紅色裝飾品,红色装饰品
+CraftMaterial_05730_pl,Rotschmuck,red ornaments,decorazioni rosse,rode versieringen,красные украшения,boules rouges,adornos rojos,red ornaments,boules rouges,adornos rojos,あかいオーナメント,빨간 오너먼트,紅色裝飾品,红色装饰品
+CraftMaterial_05731,Blauschmuck,blue ornament,decorazione blu,blauwe versiering,синее украшение,boule bleue,adorno azul,blue ornament,boule bleue,adorno azul,あおいオーナメント,파란 오너먼트,藍色裝飾品,蓝色装饰品
+CraftMaterial_05731_pl,Blauschmuck,blue ornaments,decorazioni blu,blauwe versieringen,синие украшения,boules bleues,adornos azules,blue ornaments,boules bleues,adornos azules,あおいオーナメント,파란 오너먼트,藍色裝飾品,蓝色装饰品
+CraftMaterial_05732,Goldschmuck,gold ornament,decorazione dorata,gouden versiering,золотое украшение,boule dorée,adorno dorado,gold ornament,boule dorée,adorno dorado,きんのオーナメント,금 오너먼트,金色裝飾品,金色装饰品
+CraftMaterial_05732_pl,Goldschmuck,gold ornaments,decorazioni dorate,gouden versieringen,золотые украшения,boules dorées,adornos dorados,gold ornaments,boules dorées,adornos dorados,きんのオーナメント,금 오너먼트,金色裝飾品,金色装饰品
+CraftMaterial_12968,Perle,pearl,perla,parel,жемчужина,perle,perla,pearl,perle,perla,しんじゅ,진주,珍珠,珍珠
+CraftMaterial_12968_pl,Perlen,pearls,perle,parels,жемчужины,perles,perlas,pearls,perles,perlas,しんじゅ,진주,珍珠,珍珠
+CraftPhoneCase_08760,NookPhone-Gestaltungskit,customizable phone case kit,kit personaliz. Nook Phone,NookPhone-hoesje,набор: переделка чехла,kit coque personnalisable,funda móvil personalizable,customizable phone case kit,kit coque personnalisable,kit de funda personalizable,スマホケースリメイクキット,스마트폰 케이스 리폼 키트,手機殼改造工具組,手机壳改造工具组
+CraftPhoneCase_13439,Pocket Camp-Hülle,Pocket Camp phone case,custodia Pocket Camp,Pocket Camp-hoesje,чехол Pocket Camp,coque Pocket Camp,funda móvil Pocket Camp,Pocket Camp phone case,coque Pocket Camp,funda teléfono Pocket Camp,ポケットキャンプのスマホケース,포켓 캠프 스마트폰 케이스,口袋露營廣場手機殼,口袋露营广场手机壳
+CraftPhoneCase_14820,FHA-Smartphone-Hülle,Paradise Planning case,custodia Casimira vacanze,resortplanbureauhoesje,чехол курортного бюро,coque Les Villas de Lou,funda móvil Archipiélago,Paradise Planning case,coque Paradis sur mesure,funda celular Archipiélago,タクミライフのスマホケース,파라다이스 플래닝 스마트폰 케이스,巧美生活手機殼,巧美生活手机壳
+CraftRemake_02513,Umgestaltungsset,customization kit,kit di personalizzazione,aanpassingspakket,набор для переделки,kit de personnalisation,kit de personalización,customization kit,kit de personnalisation,kit de personalización,リメイクキット,리폼 키트,改造工具組,改造工具组
+CraftRemake_02513_pl,Umgestaltungssets,customization kits,kit di personalizzazione,aanpassingspakketten,наборы для переделки,kits de personnalisation,kits de personalización,customization kits,kits de personnalisation,kits de personalización,リメイクキット,리폼 키트,改造工具組,改造工具组
+Ore_02502,Stein,stone,pietra,steen,камень,pierre,piedra,stone,pierre,piedra,いし,돌,石頭,石头
+Ore_02502_pl,Steine,stones,pietre,stenen,камни,pierres,piedras,stones,pierres,piedras,いし,돌,石頭,石头
+Ore_02505,Golderz,gold nugget,minerale d'oro,goudklompje,золотой самородок,pépite d'or,pepita de oro,gold nugget,pépite d'or,pepita de oro,きんこうせき,금광석,金礦石,金矿石
+Ore_02505_pl,Golderz,gold nuggets,minerali d'oro,goudklompjes,золотые самородки,pépites d'or,pepitas de oro,gold nuggets,pépites d'or,pepitas de oro,きんこうせき,금광석,金礦石,金矿石
+Ore_02511,Eisenerz,iron nugget,minerale di ferro,ijzerklompje,железный самородок,pépite de fer,pepita de hierro,iron nugget,pépite de fer,pepita de hierro,てっこうせき,철광석,鐵礦石,铁矿石
+Ore_02511_pl,Eisenerz,iron nuggets,minerali di ferro,ijzerklompjes,железные самородки,pépites de fer,pepitas de hierro,iron nuggets,pépites de fer,pepitas de hierro,てっこうせき,철광석,鐵礦石,铁矿石
+Ore_03090,Lehm,clay,pezzo di argilla,kleihomp,кусок глины,argile,bola de arcilla,clay,argile,bola de arcilla,ねんど,점토,黏土,黏土
+Ore_03090_pl,Lehm,clay,pezzi di argilla,kleihompen,куски глины,argile,bolas de arcilla,clay,argile,bolas de arcilla,ねんど,점토,黏土,黏土
+Sakurapetal_05859,Kirschblüte,cherry-blossom petal,petalo di ciliegio,kersenbloesemblaadje,лепесток вишни,pétale de cerisier,pétalo de cerezo,cherry-blossom petal,pétale de cerisier,pétalo de cerezo,さくらのはなびら,벚꽃잎,櫻花花瓣,樱花花瓣
+Sakurapetal_05859_pl,Kirschblüten,cherry-blossom petals,petali di ciliegio,kersenbloesemblaadjes,лепестки вишни,pétales de cerisier,pétalos de cerezo,cherry-blossom petals,pétales de cerisier,pétalos de cerezo,さくらのはなびら,벚꽃잎,櫻花花瓣,樱花花瓣
+SnowCrystal_03539,Schneeflocke,snowflake,fiocco di neve,sneeuwvlok,снежинка,flocon de neige,copo de nieve,snowflake,flocon de neige,copo de nieve,ゆきのけっしょう,눈의 결정,雪花,雪花
+SnowCrystal_03539_pl,Schneeflocken,snowflakes,fiocchi di neve,sneeuwvlokken,снежинки,flocons de neige,copos de nieve,snowflakes,flocons de neige,copos de nieve,ゆきのけっしょう,눈의 결정,雪花,雪花
+SnowCrystal_03540,Riesenschneeflocke,large snowflake,fiocco di neve grande,grote sneeuwvlok,крупная снежинка,grand flocon de neige,copo de nieve XL,large snowflake,grand flocon de neige,copo de nieve XL,ゆきのだいけっしょう,커다란 눈의 결정,大雪花,大雪花
+SnowCrystal_03540_pl,Riesenschneeflocken,large snowflakes,fiocchi di neve grandi,grote sneeuwvlokken,крупные снежинки,grands flocons de neige,copos de nieve XL,large snowflakes,grands flocons de neige,copos de nieve XL,ゆきのだいけっしょう,커다란 눈의 결정,大雪花,大雪花
+StarPiece_05983,Sternensplitter,star fragment,frammento di stella,sterrenfragment,осколок звезды,fragment d'étoile,fragmento de estrella,star fragment,fragment d'étoile,fragmento de estrella,ほしのかけら,별의 조각,星星碎片,星星碎片
+StarPiece_05983_pl,Sternensplitter,star fragments,frammenti di stella,sterrenfragmenten,осколки звезды,fragments d'étoile,fragmentos de estrella,star fragments,fragments d'étoile,fragmentos de estrella,ほしのかけら,별의 조각,星星碎片,星星碎片
+StarPiece_05984,Riesensternensplitter,large star fragment,frammento di stella grande,groot sterrenfragment,крупный осколок звезды,fragment de grande étoile,fragmento de estrella XL,large star fragment,fragment de grande étoile,fragmento de estrella XL,おおきなほしのかけら,커다란 별의 조각,大星星碎片,大星星碎片
+StarPiece_05984_pl,Riesensternensplitter,large star fragments,frammenti di stella grandi,grote sterrenfragmenten,крупные осколки звезды,fragments de grande étoile,fragmentos de estrella XL,large star fragments,fragments de grande étoile,fragmentos de estrella XL,おおきなほしのかけら,커다란 별의 조각,大星星碎片,大星星碎片
+StarPiece_05985,Steinbock-Splitter,Capricorn fragment,frammento di Capricorno,Steenbokfragment,фрагмент Козерога,fragment de Capricorne,fragmento de Capricornio,Capricorn fragment,fragment de Capricorne,fragmento de Capricornio,やぎざのかけら,염소자리 조각,摩羯座碎片,摩羯座碎片
+StarPiece_05985_pl,Steinbock-Splitter,Capricorn fragments,frammenti di Capricorno,Steenbokfragmenten,фрагменты Козерога,fragments de Capricorne,fragmentos de Capricornio,Capricorn fragments,fragments de Capricorne,fragmentos de Capricornio,やぎざのかけら,염소자리 조각,摩羯座碎片,摩羯座碎片
+StarPiece_05986,Wassermann-Splitter,Aquarius fragment,frammento di Acquario,Watermanfragment,фрагмент Водолея,fragment de Verseau,fragmento de Acuario,Aquarius fragment,fragment de Verseau,fragmento de Acuario,みずがめざのかけら,물병자리 조각,水瓶座碎片,水瓶座碎片
+StarPiece_05986_pl,Wassermann-Splitter,Aquarius fragments,frammenti di Acquario,Watermanfragmenten,фрагменты Водолея,fragments de Verseau,fragmentos de Acuario,Aquarius fragments,fragments de Verseau,fragmentos de Acuario,みずがめざのかけら,물병자리 조각,水瓶座碎片,水瓶座碎片
+StarPiece_05987,Fische-Splitter,Pisces fragment,frammento di Pesci,Vissenfragment,фрагмент Рыб,fragment de Poissons,fragmento de Piscis,Pisces fragment,fragment de Poissons,fragmento de Piscis,うおざのかけら,물고기자리 조각,雙魚座碎片,双鱼座碎片
+StarPiece_05987_pl,Fische-Splitter,Pisces fragments,frammenti di Pesci,Vissenfragmenten,фрагменты Рыб,fragments de Poissons,fragmentos de Piscis,Pisces fragments,fragments de Poissons,fragmentos de Piscis,うおざのかけら,물고기자리 조각,雙魚座碎片,双鱼座碎片
+StarPiece_05988,Widder-Splitter,Aries fragment,frammento di Ariete,Ramfragment,фрагмент Овна,fragment de Bélier,fragmento de Aries,Aries fragment,fragment de Bélier,fragmento de Aries,おひつじざのかけら,양자리 조각,牡羊座碎片,白羊座碎片
+StarPiece_05988_pl,Widder-Splitter,Aries fragments,frammenti di Ariete,Ramfragmenten,фрагменты Овна,fragments de Bélier,fragmentos de Aries,Aries fragments,fragments de Bélier,fragmentos de Aries,おひつじざのかけら,양자리 조각,牡羊座碎片,白羊座碎片
+StarPiece_05989,Stier-Splitter,Taurus fragment,frammento di Toro,Stierfragment,фрагмент Тельца,fragment de Taureau,fragmento de Tauro,Taurus fragment,fragment de Taureau,fragmento de Tauro,おうしざのかけら,황소자리 조각,金牛座碎片,金牛座碎片
+StarPiece_05989_pl,Stier-Splitter,Taurus fragments,frammenti di Toro,Stierfragmenten,фрагменты Тельца,fragments de Taureau,fragmentos de Tauro,Taurus fragments,fragments de Taureau,fragmentos de Tauro,おうしざのかけら,황소자리 조각,金牛座碎片,金牛座碎片
+StarPiece_05990,Zwillinge-Splitter,Gemini fragment,frammento di Gemelli,Tweelingenfragment,фрагмент Близнецов,fragment de Gémeaux,fragmento de Géminis,Gemini fragment,fragment de Gémeaux,fragmento de Géminis,ふたござのかけら,쌍둥이자리 조각,雙子座碎片,双子座碎片
+StarPiece_05990_pl,Zwillinge-Splitter,Gemini fragments,frammenti di Gemelli,Tweelingenfragmenten,фрагменты Близнецов,fragments de Gémeaux,fragmentos de Géminis,Gemini fragments,fragments de Gémeaux,fragmentos de Géminis,ふたござのかけら,쌍둥이자리 조각,雙子座碎片,双子座碎片
+StarPiece_05991,Krebs-Splitter,Cancer fragment,frammento di Cancro,Kreeftfragment,фрагмент Рака,fragment de Cancer,fragmento de Cáncer,Cancer fragment,fragment de Cancer,fragmento de Cáncer,かにざのかけら,게자리 조각,巨蟹座碎片,巨蟹座碎片
+StarPiece_05991_pl,Krebs-Splitter,Cancer fragments,frammenti di Cancro,Kreeftfragmenten,фрагменты Рака,fragments de Cancer,fragmentos de Cáncer,Cancer fragments,fragments de Cancer,fragmentos de Cáncer,かにざのかけら,게자리 조각,巨蟹座碎片,巨蟹座碎片
+StarPiece_05992,Löwe-Splitter,Leo fragment,frammento di Leone,Leeuwfragment,фрагмент Льва,fragment de Lion,fragmento de Leo,Leo fragment,fragment de Lion,fragmento de Leo,ししざのかけら,사자자리 조각,獅子座碎片,狮子座碎片
+StarPiece_05992_pl,Löwe-Splitter,Leo fragments,frammenti di Leone,Leeuwfragmenten,фрагменты Льва,fragments de Lion,fragmentos de Leo,Leo fragments,fragments de Lion,fragmentos de Leo,ししざのかけら,사자자리 조각,獅子座碎片,狮子座碎片
+StarPiece_05993,Jungfrau-Splitter,Virgo fragment,frammento di Vergine,Maagdfragment,фрагмент Девы,fragment de Vierge,fragmento de Virgo,Virgo fragment,fragment de Vierge,fragmento de Virgo,おとめざのかけら,처녀자리 조각,處女座碎片,处女座碎片
+StarPiece_05993_pl,Jungfrau-Splitter,Virgo fragments,frammenti di Vergine,Maagdfragmenten,фрагменты Девы,fragments de Vierge,fragmentos de Virgo,Virgo fragments,fragments de Vierge,fragmentos de Virgo,おとめざのかけら,처녀자리 조각,處女座碎片,处女座碎片
+StarPiece_05994,Waage-Splitter,Libra fragment,frammento di Bilancia,Weegschaalfragment,фрагмент Весов,fragment de Balance,fragmento de Libra,Libra fragment,fragment de Balance,fragmento de Libra,てんびんざのかけら,천칭자리 조각,天秤座碎片,天秤座碎片
+StarPiece_05994_pl,Waage-Splitter,Libra fragments,frammenti di Bilancia,Weegschaalfragmenten,фрагменты Весов,fragments de Balance,fragmentos de Libra,Libra fragments,fragments de Balance,fragmentos de Libra,てんびんざのかけら,천칭자리 조각,天秤座碎片,天秤座碎片
+StarPiece_05995,Skorpion-Splitter,Scorpius fragment,frammento di Scorpione,Schorpioenfragment,фрагмент Скорпиона,fragment de Scorpion,fragmento de Escorpio,Scorpius fragment,fragment de Scorpion,fragmento de Escorpio,さそりざのかけら,전갈자리 조각,天蠍座碎片,天蝎座碎片
+StarPiece_05995_pl,Skorpion-Splitter,Scorpius fragments,frammenti di Scorpione,Schorpioenfragmenten,фрагменты Скорпиона,fragments de Scorpion,fragmentos de Escorpio,Scorpius fragments,fragments de Scorpion,fragmentos de Escorpio,さそりざのかけら,전갈자리 조각,天蠍座碎片,天蝎座碎片
+StarPiece_05996,Schütze-Splitter,Sagittarius fragment,frammento di Sagittario,Boogschutterfragment,фрагмент Стрельца,fragment de Sagittaire,fragmento de Sagitario,Sagittarius fragment,fragment de Sagittaire,fragmento de Sagitario,いてざのかけら,사수자리 조각,射手座碎片,射手座碎片
+StarPiece_05996_pl,Schütze-Splitter,Sagittarius fragments,frammenti di Sagittario,Boogschutterfragmenten,фрагменты Стрельца,fragments de Sagittaire,fragmentos de Sagitario,Sagittarius fragments,fragments de Sagittaire,fragmentos de Sagitario,いてざのかけら,사수자리 조각,射手座碎片,射手座碎片
