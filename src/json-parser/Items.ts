@@ -7,21 +7,37 @@
 // These functions will throw an error if the JSON doesn't
 // match the expected interface, even if the JSON is valid.
 
-import { readFile, readFileSync } from 'fs'
+import { readFileSync } from 'fs'
+import { errorAndExit } from '../util'
 
 export interface Items {
-    id: number;
-    name: string;
-    category: string;
-    variants: number[];
-    image: string[] | string;
-    flags: number;
-    source?: string;
-    buy?: number;
-    sell?: number;
-    tags?: string[];
-    recipe?: Array<Array<number | string> | number | string>;
-    kitCost?: number;
+  id: number;
+  name: string;
+  category: string;
+  variants: number[];
+  image: string[] | string;
+  flags: number;
+  source?: string;
+  buy?: number;
+  sell?: number;
+  tags?: string[];
+  recipe?: Array<Array<number | string> | number | string>;
+  kitCost?: number;
+}
+
+export enum VariantsType { OneVariant, SingleAdjective, SingleButActuallyDoubleAdjective, DoubleAdjective }
+export function VariantsTypeOf (items : Items) : VariantsType {
+  switch (items.variants.length) {
+    case 0: return VariantsType.OneVariant
+    case 1: return VariantsType.SingleAdjective
+    case 2: 
+      if (items.variants[1] === 1) {
+        return VariantsType.SingleButActuallyDoubleAdjective
+      }
+      return VariantsType.DoubleAdjective
+  }
+  errorAndExit(`Could not interpret variants array ${items.variants}`)
+  return VariantsType.DoubleAdjective
 }
 
 // Converts JSON strings to/from your types

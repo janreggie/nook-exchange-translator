@@ -1,4 +1,5 @@
 import { parseFile } from 'fast-csv'
+import { LowercaseName } from './util'
 
 export interface AeonTranslations {
   Id: string;
@@ -16,6 +17,10 @@ export interface AeonTranslations {
   KRko: string;
   TWzh: string;
   CNzh: string;
+}
+
+export function AeonKey (translations : AeonTranslations) : string {
+  return LowercaseName(translations.USen)
 }
 
 export function GetTranslation (translations : AeonTranslations, locale: string) : string {
