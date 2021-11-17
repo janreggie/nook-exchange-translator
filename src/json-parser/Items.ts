@@ -30,11 +30,7 @@ export function VariantsTypeOf (items : Items) : VariantsType {
   switch (items.variants.length) {
     case 0: return VariantsType.OneVariant
     case 1: return VariantsType.SingleAdjective
-    case 2: 
-      if (items.variants[1] === 1) {
-        return VariantsType.SingleButActuallyDoubleAdjective
-      }
-      return VariantsType.DoubleAdjective
+    case 2:return VariantsType.DoubleAdjective
   }
   errorAndExit(`Could not interpret variants array ${items.variants}`)
   return VariantsType.DoubleAdjective

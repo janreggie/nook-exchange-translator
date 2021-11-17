@@ -2,7 +2,7 @@ import { Convert as ItemsConvert, Items as ItemsType, VariantsType, VariantsType
 import { Convert as TranslationsConvert, Translations as TranslationsType } from './json-parser/Translations'
 import { Convert as AdjectivesConvert, Adjectives as AdjectivesType } from './json-parser/Adjectives'
 import { AeonKey, AeonTranslations, GetTranslation, Parser as AeonParser } from './aeon-parser'
-import { CapitalizeName, errorAndExit, LowercaseName } from './util'
+import { CapitalizeName, LowercaseName } from './util'
 
 const OLD_JSON_DIR = './old-json'
 const AEON_CSV_DIR = './aeon-csvs'
@@ -15,7 +15,7 @@ const NookExchangeAdjectives : Map<number, AdjectivesType> = AdjectivesConvert.f
 const NameToNookExchangeId = new Map<string, number>() // Name must be in all lower case
 for (const [k, v] of NookExchangeItems.entries()) {
   if (NameToNookExchangeId.has(v.name.toLocaleLowerCase())) {
-    errorAndExit(`Duplicate item ${v.name} in list of items`)
+    console.error(`Duplicate item ${v.name} in list of items`)
   }
   NameToNookExchangeId.set(v.name.toLocaleLowerCase(), k)
 }
@@ -67,35 +67,80 @@ async function main () {
 
   // All Item Translations go here
   const allItemTranslations = new Map<string, AeonTranslations>()
+  const addTranslations = (translations : AeonTranslations[]) => {
+    for (const item of translations) {
+      if (allItemTranslations.has(item.Id)) {
+        console.error(`Item ${item.USen} of ID ${item.Id} already exists as ${allItemTranslations.get(item.Id)!.USen}`)
+        return
+      }
+      allItemTranslations.set(item.Id, item)
+    }
+  }
+
+  // All Adjective Translations go here.
+  // Map AeonItemId -> Map USen -> Translations object
+  const allAdjectiveVariantTranslations = new Map<string, Map<string, AeonTranslations>>()
+  const allAdjectivePatternTranslations = new Map<string, Map<string, AeonTranslations>>()
 
   const nonSpecialCategories = [
     'Bug Models',
     'Dishes',
     'Door Deco',
-    'Etc',
-    'Event Items',
     'Fish Models',
     'Floors',
     'Fossils',
     'Furniture',
     'Gyroids',
-    'Harvs Island Items',
-    'Money',
     'Music',
-    'Plants',
     'Posters',
     'Rugs',
-    'Tools',
     'Umbrellas',
     'Wallpaper'
   ]
   const nonSpecialItems = await OpenAeons(nonSpecialCategories) // AeonItem.Id -> Translations obj
+  addTranslations(nonSpecialItems)
+
+  for (const item of (await OpenAeon('Item Variant Names'))) {
+    const ids = item.Id.split('_')
+    if (ids.length !== 3) {
+      console.error(`invalid id ${item.Id} for item ${item.USen}`)
+      return
+    }
+    const itemId = ids[0] + '_' + ids[1]
+
+    let mp = allAdjectiveVariantTranslations.get(itemId)
+    if (mp === undefined) {
+      mp = new Map()
+      allAdjectiveVariantTranslations.set(itemId, mp)
+    }
+    mp.set(item.USen, item)
+  }
+
+  for (const item of (await OpenAeon('Item Pattern Names'))) {
+    const ids = item.Id.split('_')
+    if (ids.length !== 3) {
+      console.error(`invalid id ${item.Id} for item ${item.USen}`)
+      return
+    }
+    const itemId = ids[0] + '_' + ids[1]
+
+    let mp = allAdjectivePatternTranslations.get(itemId)
+    if (mp === undefined) {
+      mp = new Map()
+      allAdjectivePatternTranslations.set(itemId, mp)
+    }
+    mp.set(item.USen, item)
+  }
 
   // Special cases: Some items are plural, others aren't
   const somePluralCategories = [
     'Crafting Items', // TODO: Reconcile because some Crafting Items have similar English names
+    'Etc', // TODO: Reconcile, some use plural while others use singular
+    'Event Items', // TODO: Some use plural others use singular
     'Fencing', // TODO: Reconcile: use singular
-    'Shells'
+    'Plants',
+    'Shells',
+    'Tools'
   ]
 
   // Special cases: Photos
@@ -105,81 +150,82 @@ async function main () {
   // Read data from Clothing
   const clothingCategories = ['Accessories', 'Bags', 'Bottoms', 'Caps', 'Dress-Up', 'Handbags', 'Helmets', 'Shoes', 'Socks', 'Tops', 'Wetsuits']
   const clothingItems = await OpenAeons(clothingCategories)
-  const clothingItemTraslations = new Map<string, AeonTranslations>()
-  for (const item of clothingItems) {
-    if (clothingItemTraslations.has(item.Id)) {
-      errorAndExit(`Item ${item.USen} of ID ${item.Id} already exists as ${clothingItemTraslations.get(item.Id)!.USen}`)
-      return
-    }
-    clothingItemTraslations.set(item.Id, item)
-  }
+  addTranslations(clothingItems)
 
   const clothingAdjectives = await OpenAeons(clothingCategories.map(name => name + ' Variants'))
-  const clothingAdjectiveTranslations = new Map<string, Map<string, AeonTranslations>>() // Map ItemId -> Translation.USen -> actual item
   for (const item of clothingAdjectives) { // item.Id is in form ItemId_Category_VariantId
     const ids = item.Id.split('_')
     if (ids.length !== 3) {
-      errorAndExit(`invalid id ${item.Id} for item ${item.USen}`)
+      console.error(`invalid id ${item.Id} for item ${item.USen}`)
       return
     }
     const itemId = ids[0]
-    let mp = clothingAdjectiveTranslations.get(itemId)
+    let mp = allAdjectiveVariantTranslations.get(itemId)
     if (mp === undefined) {
       mp = new Map()
-      clothingAdjectiveTranslations.set(itemId, mp)
+      allAdjectiveVariantTranslations.set(itemId, mp)
     }
     mp.set(item.USen, item)
   }
 
-  // Now, let's roll per clothing item...
+  // Now, let's roll per item
   // The code below works! But can we make it a bit, um, less shite?
-  for (const [aeonItemId, translations] of clothingItemTraslations) {
+  for (const [aeonItemId, translations] of allItemTranslations) {
     const nookExchangeId = NameToNookExchangeId.get(LowercaseName(translations.USen))
     if (nookExchangeId === undefined) {
       console.log(translations)
-      errorAndExit(`Cannot find appropriate ID for ${translations.USen}`)
-      return
+      console.error(`Cannot find appropriate ID for ${translations.USen}`)
+      continue
     }
 
     const nookExchangeItem = NookExchangeItems.get(nookExchangeId)
     if (!nookExchangeItem) {
-      errorAndExit(`No Nook Exchange Item for ID ${nookExchangeId}, ${translations.USen}`)
+      console.error(`No Nook Exchange Item for ID ${nookExchangeId}, ${translations.USen}`)
       return
     }
 
     // Set the items in question
+
     for (const locale of Locales) {
-      const localTranslations = newTranslations.get(locale) as TranslationsType
+      const localTranslations = newTranslations.get(locale)
+      if (localTranslations === undefined) {
+        console.error(`Could not find translations for ${translations.USen}`)
+        process.exit(1)
+      }
+
       localTranslations.items.set(nookExchangeId, {
         item: CapitalizeName(GetTranslation(translations, locale)),
         adjectives: (() : (string[] | string[][] | undefined) => {
           const variantType = VariantsTypeOf(nookExchangeItem)
           const originalAdjectives = NookExchangeAdjectives.get(nookExchangeId)
+          const isEmpty = (val : string) => (val === '' || val === 'NA')
 
           switch (variantType) {
             case VariantsType.OneVariant:
               return undefined
             case VariantsType.SingleAdjective:
               return (originalAdjectives! as string[])
-                .map(val => GetTranslation(clothingAdjectiveTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale))
-            case VariantsType.SingleButActuallyDoubleAdjective:
-              return [
-                (originalAdjectives![0] as string[])
-                  .map(val => GetTranslation(clothingAdjectiveTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)),
-                ['']
-              ]
+                .map(val => GetTranslation(allAdjectiveVariantTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale))
             case VariantsType.DoubleAdjective:
-              return (originalAdjectives! as string[][])
-                .map(arr => arr.map(val => GetTranslation(clothingAdjectiveTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)))
+              return [
+                (originalAdjectives![0] as string[]).map(val => {
+                  if (isEmpty(val)) { return '' }
+                  return GetTranslation(allAdjectiveVariantTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)
+                }),
+                (originalAdjectives![1] as string[]).map(val => {
+                  if (isEmpty(val)) { return '' }
+                  return GetTranslation(allAdjectivePatternTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)
+                })
+              ]
           }
         })()
       })
     }
   }
 
-  console.log(newTranslations.get('es-eu')!.items.get(12986))
-  console.log(newTranslations.get('es-eu')!.items.get(12970))
-  console.log(newTranslations.get('es-eu')!.items.get(12981))
+  for (const id of [13018, 4463, 12543, 3449]) {
+    console.log(newTranslations.get('es-eu')!.items.get(id))
+  }
 }
 
 // Opens an Aeon CSV
