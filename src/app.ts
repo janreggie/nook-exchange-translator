@@ -48,7 +48,7 @@ async function main () {
     // The recipes are stored from length two onwards
     const requirements = item.recipe.slice(2) as Array<[number, string]>
     for (const item of requirements) {
-      allMaterials.add(LowercaseName(item[1]))
+      allMaterials.add(item[1])
     }
   }
 
@@ -243,7 +243,7 @@ async function main () {
 
     // Let's roll per material
     for (const material of allMaterials) {
-      localTranslations.materials.set(CapitalizeName(material), GetTranslation(allItemTranslations.get(nameToAeonId.get(material)!)!, locale))
+      localTranslations.materials.set(material, CapitalizeName(GetTranslation(allItemTranslations.get(nameToAeonId.get(LowercaseName(material))!)!, locale)))
     }
 
     // And now, let's print per locale!

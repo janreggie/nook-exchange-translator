@@ -2,10 +2,8 @@
 export function CapitalizeName (name : string) : string {
   if (!name) { return '' }
   const first = name.charAt(0)
-  if (first >= 'a' && first <= 'z') {
-    return first.toUpperCase() + name.slice(1)
-  }
-  return name
+  if (/[а-яА-ЯЁё]/.test(first)) { return name } // Skip Russian to follow Nook Exchange
+  return first.toUpperCase() + name.slice(1)
 }
 
 export function LowercaseName (name : string) : string {
