@@ -1,7 +1,7 @@
 import { Convert as ItemsConvert, Items as ItemsType, VariantsType, VariantsTypeOf } from './json-parser/Items'
 import { Convert as TranslationsConvert, Translations as TranslationsType } from './json-parser/Translations'
 import { Convert as AdjectivesConvert, Adjectives as AdjectivesType } from './json-parser/Adjectives'
-import { AeonKey, AeonTranslations, GetTranslation, Parser as AeonParser } from './aeon-parser'
+import { AeonTranslations, GetTranslation, Parser as AeonParser } from './aeon-parser'
 import { CapitalizeName, LowercaseName } from './util'
 
 const OLD_JSON_DIR = './old-json'
@@ -26,15 +26,6 @@ for (const locale of Locales) {
   OldTranslations.set(locale, TranslationsConvert.fileToTranslations(`${OLD_JSON_DIR}/translations/${locale}.json`))
 }
 
-// For later...
-const newTranslations = new Map<string, TranslationsType>()
-for (const locale of Locales) {
-  newTranslations.set(locale, {
-    items: new Map(),
-    materials: new Map()
-  })
-}
-
 async function main () {
   // Read some items to see if things go well
   for (const id of [13018, 4463, 12543, 3449]) {
@@ -43,12 +34,6 @@ async function main () {
     console.log('Adjectives: ', NookExchangeAdjectives.get(id))
     console.log('es-eu translations: ', OldTranslations.get('es-eu')!.items.get(id))
     console.log()
-  }
-
-  // Read Aeon CSV data
-  const wetsuits = await AeonParser(`${AEON_CSV_DIR}/Wetsuits.csv`)
-  for (const locale of Locales) {
-    console.log(`${locale} : ${GetTranslation(wetsuits[0], locale)}`)
   }
 
   // Okay, but what *are* the materials that we'll need translating?
@@ -71,7 +56,7 @@ async function main () {
     for (const item of translations) {
       if (allItemTranslations.has(item.Id)) {
         console.error(`Item ${item.USen} of ID ${item.Id} already exists as ${allItemTranslations.get(item.Id)!.USen}`)
-        return
+        process.exit(1)
       }
       allItemTranslations.set(item.Id, item)
     }
@@ -142,10 +127,22 @@ async function main () {
     'Shells',
     'Tools'
   ]
+  const specialCategories = await OpenAeons(somePluralCategories)
+  addTranslations(specialCategories)
 
   // Special cases: Photos
+  const photoVariants = allAdjectiveVariantTranslations.get('Bromide_06426')! // The only one whose value is in the JSON
+  for (const photoItem of await OpenAeon('Photos')) {
+    addTranslations([photoItem])
+    const localVariants = new Map()
+    for (const [k, v] of photoVariants) {
+      localVariants.set(k, { ...v, Id: photoItem.Id }) // for later...
+    }
+    allAdjectiveVariantTranslations.set(photoItem.Id, localVariants)
+  }
 
   // Special cases: Art
+  addTranslations(await OpenAeon('Art'))
 
   // Read data from Clothing
   const clothingCategories = ['Accessories', 'Bags', 'Bottoms', 'Caps', 'Dress-Up', 'Handbags', 'Helmets', 'Shoes', 'Socks', 'Tops', 'Wetsuits']
@@ -168,28 +165,28 @@ async function main () {
     mp.set(item.USen, item)
   }
 
-  // Now, let's roll per item
-  // The code below works! But can we make it a bit, um, less shite?
-  for (const [aeonItemId, translations] of allItemTranslations) {
-    const nookExchangeId = NameToNookExchangeId.get(LowercaseName(translations.USen))
-    if (nookExchangeId === undefined) {
-      console.log(translations)
-      console.error(`Cannot find appropriate ID for ${translations.USen}`)
-      continue
+  // For later...
+
+  const newTranslations = new Map<string, TranslationsType>()
+  for (const locale of Locales) {
+    const localTranslations : TranslationsType = {
+      items: new Map(),
+      materials: new Map()
     }
+    newTranslations.set(locale, localTranslations)
 
-    const nookExchangeItem = NookExchangeItems.get(nookExchangeId)
-    if (!nookExchangeItem) {
-      console.error(`No Nook Exchange Item for ID ${nookExchangeId}, ${translations.USen}`)
-      return
-    }
+    // Let's roll per item
+    for (const [aeonItemId, translations] of allItemTranslations) {
+      const nookExchangeId = NameToNookExchangeId.get(LowercaseName(translations.USen))
+      if (nookExchangeId === undefined) {
+        console.log(translations)
+        console.error(`Cannot find appropriate ID for ${translations.USen}`)
+        continue
+      }
 
-    // Set the items in question
-
-    for (const locale of Locales) {
-      const localTranslations = newTranslations.get(locale)
-      if (localTranslations === undefined) {
-        console.error(`Could not find translations for ${translations.USen}`)
+      const nookExchangeItem = NookExchangeItems.get(nookExchangeId)
+      if (!nookExchangeItem) {
+        console.error(`No Nook Exchange Item for ID ${nookExchangeId}, ${translations.USen}`)
         process.exit(1)
       }
 
@@ -198,34 +195,63 @@ async function main () {
         adjectives: (() : (string[] | string[][] | undefined) => {
           const variantType = VariantsTypeOf(nookExchangeItem)
           const originalAdjectives = NookExchangeAdjectives.get(nookExchangeId)
-          const isEmpty = (val : string) => (val === '' || val === 'NA')
 
           switch (variantType) {
             case VariantsType.OneVariant:
               return undefined
             case VariantsType.SingleAdjective:
-              return (originalAdjectives! as string[])
-                .map(val => GetTranslation(allAdjectiveVariantTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale))
-            case VariantsType.DoubleAdjective:
+              return originalAdjectives
+                ?.map(val =>
+                  GetTranslation(allAdjectiveVariantTranslations
+                    .get(aeonItemId)!
+                    .get(val as string) as AeonTranslations,
+                  locale))
+            case VariantsType.DoubleAdjective: {
+              const variantTranslations = originalAdjectives![0] as string[]
+              const patternTranslations = originalAdjectives![1] as string[]
               return [
-                (originalAdjectives![0] as string[]).map(val => {
-                  if (isEmpty(val)) { return '' }
-                  return GetTranslation(allAdjectiveVariantTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)
-                }),
-                (originalAdjectives![1] as string[]).map(val => {
-                  if (isEmpty(val)) { return '' }
-                  return GetTranslation(allAdjectivePatternTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)
-                })
+                variantTranslations.length <= 1
+                  ? ['']
+                  : (variantTranslations).map(val => {
+                      return GetTranslation(allAdjectiveVariantTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)
+                    }),
+                patternTranslations.length <= 1
+                  ? ['']
+                  : (patternTranslations).map(val => {
+                      return GetTranslation(allAdjectivePatternTranslations.get(aeonItemId)!.get(val) as AeonTranslations, locale)
+                    })
               ]
+            }
           }
         })()
       })
+    }
+
+    // Let's roll per material
+    for (const material of materials) {
+      const nookExchangeId = NameToNookExchangeId.get(LowercaseName(material))
+      if (nookExchangeId === undefined) {
+        console.error(`Cannot find appropriate ID for ${material}`)
+        continue
+      }
+
+      const nookExchangeItem = NookExchangeItems.get(nookExchangeId)
+      if (!nookExchangeItem) {
+        console.error(`No Nook Exchange Item for ID ${nookExchangeId}, ${material}`)
+        process.exit(1)
+      }
+
+      // Now, what do we do...?
+      // idfk.
     }
   }
 
   for (const id of [13018, 4463, 12543, 3449]) {
     console.log(newTranslations.get('es-eu')!.items.get(id))
   }
+
+  // And now, let's print this to be piped
+  // console.log(TranslationsConvert.translationsToJson(newTranslations.get('es-eu')!))
 }
 
 // Opens an Aeon CSV
