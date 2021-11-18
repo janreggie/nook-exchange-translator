@@ -21,7 +21,7 @@ export interface Items {
   buy?: number;
   sell?: number;
   tags?: string[];
-  recipe?: Array<Array<number | string> | number | string>;
+  recipe?: [number, string, ...Array<[number, string]>];
   kitCost?: number;
 }
 
