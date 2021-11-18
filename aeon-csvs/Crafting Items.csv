@@ -5,17 +5,13 @@ CraftMaterial_02500,Ast,tree branch,ramo,tak,ветка,branche d'arbre,rama,tre
 CraftMaterial_02500_pl,Äste,tree branches,rami,takken,ветки,branches d'arbre,ramas,tree branches,branches d'arbre,ramas,きのえだ,나뭇가지,樹枝,树枝
 CraftMaterial_02501,Bambus,bamboo piece,pezzo di bambù,bamboestok,часть бамбука,morceau de bambou,tallo de bambú,bamboo piece,morceau de bambou,tallo de bambú,バンブー,대나무 토막,竹子材料,竹子材料
 CraftMaterial_02501_pl,Bambus,bamboo pieces,pezzi di bambù,bamboestokken,части бамбука,morceaux de bambou,tallos de bambú,bamboo pieces,morceaux de bambou,tallos de bambú,バンブー,대나무 토막,竹子材料,竹子材料
-CraftMaterial_02767,Weichholz,softwood,legno morbido,zachthout,мягкая древесина,bois tendre,tabla flexible,softwood,bois tendre,tabla flexible,やわらかいもくざい,부드러운 목재,軟木材,软木材
 CraftMaterial_02767_pl,Weichholz,softwood,legna morbida,zachthout,мягкая древесина,bois tendre,tablas flexibles,softwood,bois tendre,tablas flexibles,やわらかいもくざい,부드러운 목재,軟木材,软木材
-CraftMaterial_02768,Holz,wood,legno normale,hout,древесина,bois,tabla normal,wood,bois,tabla normal,もくざい,목재,木材,木材
 CraftMaterial_02768_pl,Holz,wood,legna normale,hout,древесина,bois,tablas normales,wood,bois,tablas normales,もくざい,목재,木材,木材
-CraftMaterial_02769,Hartholz,hardwood,legno duro,hardhout,твердая древесина,bois dur,tabla rígida,hardwood,bois dur,tabla rígida,かたいもくざい,단단한 목재,硬木材,硬木材
 CraftMaterial_02769_pl,Hartholz,hardwood,legna dura,hardhout,твердая древесина,bois dur,tablas rígidas,hardwood,bois dur,tablas rígidas,かたいもくざい,단단한 목재,硬木材,硬木材
 CraftMaterial_05727,Eichel,acorn,ghianda,eikel,желудь,gland,bellota,acorn,gland,bellota,どんぐり,도토리,橡栗,橡栗
 CraftMaterial_05727_pl,Eicheln,acorns,ghiande,eikels,желуди,glands,bellotas,acorns,glands,bellotas,どんぐり,도토리,橡栗,橡栗
 CraftMaterial_05728,Zapfen,pine cone,pigna,dennenappel,шишка,pomme de pin,piña,pine cone,pomme de pin,piña,まつぼっくり,솔방울,松果,松果
 CraftMaterial_05728_pl,Zapfen,pine cones,pigne,dennenappels,шишки,pommes de pin,piñas,pine cones,pommes de pin,piñas,まつぼっくり,솔방울,松果,松果
-CraftMaterial_05729,Frühlingsbambus,young spring bamboo,bambù giovane primavera,jonge lentebamboe,весенний бамбук,jeune bambou printemps,tallo de bambú primaveral,young spring bamboo,jeune bambou printemps,tallo de bambú primaveral,はるのわかたけ,봄의 대나무,春筍,春笋
 CraftMaterial_05729_pl,Frühlingsbambus,young spring bamboo,bambù giovani primavera,jonge lentebamboe,весенний бамбук,jeunes bambous printemps,tallos de bambú primaveral,young spring bamboo,jeunes bambous printemps,tallos de bambú primaveral,はるのわかたけ,봄의 대나무,春筍,春笋
 CraftMaterial_05730,Rotschmuck,red ornament,decorazione rossa,rode versiering,красное украшение,boule rouge,adorno rojo,red ornament,boule rouge,adorno rojo,あかいオーナメント,빨간 오너먼트,紅色裝飾品,红色装饰品
 CraftMaterial_05730_pl,Rotschmuck,red ornaments,decorazioni rosse,rode versieringen,красные украшения,boules rouges,adornos rojos,red ornaments,boules rouges,adornos rojos,あかいオーナメント,빨간 오너먼트,紅色裝飾品,红色装饰品
@@ -36,7 +32,6 @@ Ore_02505,Golderz,gold nugget,minerale d'oro,goudklompje,золотой само
 Ore_02505_pl,Golderz,gold nuggets,minerali d'oro,goudklompjes,золотые самородки,pépites d'or,pepitas de oro,gold nuggets,pépites d'or,pepitas de oro,きんこうせき,금광석,金礦石,金矿石
 Ore_02511,Eisenerz,iron nugget,minerale di ferro,ijzerklompje,железный самородок,pépite de fer,pepita de hierro,iron nugget,pépite de fer,pepita de hierro,てっこうせき,철광석,鐵礦石,铁矿石
 Ore_02511_pl,Eisenerz,iron nuggets,minerali di ferro,ijzerklompjes,железные самородки,pépites de fer,pepitas de hierro,iron nuggets,pépites de fer,pepitas de hierro,てっこうせき,철광석,鐵礦石,铁矿石
-Ore_03090,Lehm,clay,pezzo di argilla,kleihomp,кусок глины,argile,bola de arcilla,clay,argile,bola de arcilla,ねんど,점토,黏土,黏土
 Ore_03090_pl,Lehm,clay,pezzi di argilla,kleihompen,куски глины,argile,bolas de arcilla,clay,argile,bolas de arcilla,ねんど,점토,黏土,黏土
 Sakurapetal_05859,Kirschblüte,cherry-blossom petal,petalo di ciliegio,kersenbloesemblaadje,лепесток вишни,pétale de cerisier,pétalo de cerezo,cherry-blossom petal,pétale de cerisier,pétalo de cerezo,さくらのはなびら,벚꽃잎,櫻花花瓣,樱花花瓣
 Sakurapetal_05859_pl,Kirschblüten,cherry-blossom petals,petali di ciliegio,kersenbloesemblaadjes,лепестки вишни,pétales de cerisier,pétalos de cerezo,cherry-blossom petals,pétales de cerisier,pétalos de cerezo,さくらのはなびら,벚꽃잎,櫻花花瓣,樱花花瓣
