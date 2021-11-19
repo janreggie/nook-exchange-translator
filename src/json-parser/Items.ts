@@ -8,13 +8,12 @@
 // match the expected interface, even if the JSON is valid.
 
 import { readFileSync } from 'fs'
-import { errorAndExit } from '../util'
 
 export interface Items {
   id: number;
   name: string;
   category: string;
-  variants: number[];
+  variants: [] | [number] | [number, number];
   image: string[] | string;
   flags: number;
   source?: string;
@@ -25,20 +24,10 @@ export interface Items {
   kitCost?: number;
 }
 
-export enum VariantsType { OneVariant, SingleAdjective, SingleButActuallyDoubleAdjective, DoubleAdjective }
-export function VariantsTypeOf (items : Items) : VariantsType {
-  switch (items.variants.length) {
-    case 0: return VariantsType.OneVariant
-    case 1: return VariantsType.SingleAdjective
-    case 2:return VariantsType.DoubleAdjective
-  }
-  errorAndExit(`Could not interpret variants array ${items.variants}`)
-  return VariantsType.DoubleAdjective
-}
-
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
 export class Convert {
+  // Returns the items mapped using their IDs
   public static fileToItems (filename : string) : Map<number, Items> {
     return Convert.toItems(readFileSync(filename).toString())
   }
@@ -55,6 +44,9 @@ export class Convert {
 function oldToNew (items : Items[]) : Map<number, Items> {
   const result = new Map<number, Items>()
   items.forEach(item => {
+    if (result.has(item.id)) {
+      throw new Error(`item ID ${item.id} already exists as ${result.get(item.id)?.name}`)
+    }
     result.set(item.id, item)
   })
   return result

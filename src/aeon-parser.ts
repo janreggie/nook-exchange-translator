@@ -46,8 +46,8 @@ export async function Parser (filename : string) : Promise<AeonTranslations[]> {
   return new Promise((resolve, reject) => {
     const result : AeonTranslations[] = []
     parseFile(filename, { headers: true })
-      .on('error', error => reject(error))
-      .on('data', row => result.push(row))
+      .on('error', (error : any) => reject(error))
+      .on('data', (row : AeonTranslations) => result.push(row))
       .on('end', () => resolve(result))
   })
 }

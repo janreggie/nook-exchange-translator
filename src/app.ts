@@ -1,4 +1,4 @@
-import { Convert as ItemsConvert, Items as ItemsType, VariantsType, VariantsTypeOf } from './json-parser/Items'
+import { Convert as ItemsConvert, Items as ItemsType } from './json-parser/Items'
 import { Convert as TranslationsConvert, Translations as TranslationsType } from './json-parser/Translations'
 import { Convert as AdjectivesConvert, Adjectives as AdjectivesType } from './json-parser/Adjectives'
 import { AeonTranslations, GetTranslation, Parser as AeonParser } from './aeon-parser'
@@ -8,35 +8,21 @@ import { writeFile } from 'fs'
 const OLD_JSON_DIR = './old-json'
 const AEON_CSV_DIR = './aeon-csvs'
 const NEW_JSON_DIR = './new-json'
-
-const Locales = ['de', 'en-gb', 'es-eu', 'es-us', 'fr-eu', 'fr-us', 'it', 'ja', 'ko', 'nl', 'ru', 'zh-cn', 'zh-tw']
-
-// Read Nook Exchange data
-const NookExchangeItems : Map<number, ItemsType> = ItemsConvert.fileToItems(`${OLD_JSON_DIR}/items.json`)
-const NookExchangeAdjectives : Map<number, AdjectivesType> = AdjectivesConvert.fileToAdjectives(`${OLD_JSON_DIR}/variants.json`)
-const NameToNookExchangeId = new Map<string, number>() // Name must be in all lower case
-for (const [k, v] of NookExchangeItems.entries()) {
-  if (NameToNookExchangeId.has(v.name.toLocaleLowerCase())) {
-    console.error(`Duplicate item ${v.name} in list of items`)
-  }
-  NameToNookExchangeId.set(v.name.toLocaleLowerCase(), k)
-}
-
-// Read Nook Exchange translations
-const OldTranslations = new Map<string, TranslationsType>()
-for (const locale of Locales) {
-  OldTranslations.set(locale, TranslationsConvert.fileToTranslations(`${OLD_JSON_DIR}/translations/${locale}.json`))
-}
+const LOCALES = ['de', 'en-gb', 'es-eu', 'es-us', 'fr-eu', 'fr-us', 'it', 'ja', 'ko', 'nl', 'ru', 'zh-cn', 'zh-tw']
 
 async function main () {
-  // // Read some items to see if things go well
-  // for (const id of [13018, 4463, 12543, 3449]) {
-  //   console.log(`For ID ${id}`)
-  //   console.log('Item: ', NookExchangeItems.get(id))
-  //   console.log('Adjectives: ', NookExchangeAdjectives.get(id))
-  //   console.log('es-eu translations: ', OldTranslations.get('es-eu')!.items.get(id))
-  //   console.log()
-  // }
+  // Read Nook Exchange data. Mapped using their Nook Exchange ID
+  const NookExchangeItems : Map<number, ItemsType> = ItemsConvert.fileToItems(`${OLD_JSON_DIR}/items.json`)
+  const NookExchangeAdjectives : Map<number, AdjectivesType> = AdjectivesConvert.fileToAdjectives(`${OLD_JSON_DIR}/variants.json`)
+
+  // Create this map
+  const nameToNookExchangeId = new Map<string, number>() // Name must be in all lower case
+  for (const [k, v] of NookExchangeItems.entries()) {
+    if (nameToNookExchangeId.has(v.name.toLocaleLowerCase())) {
+      console.error(`Duplicate item ${v.name} in list of items`)
+    }
+    nameToNookExchangeId.set(v.name.toLocaleLowerCase(), k)
+  }
 
   // Okay, but what *are* the materials that we'll need translating?
   const allMaterials = new Set<string>()
@@ -44,9 +30,7 @@ async function main () {
     if (!item.recipe) {
       continue
     }
-
-    // The recipes are stored from length two onwards
-    const requirements = item.recipe.slice(2) as Array<[number, string]>
+    const [, , ...requirements] = item.recipe
     for (const item of requirements) {
       allMaterials.add(item[1])
     }
@@ -58,40 +42,51 @@ async function main () {
   const addTranslations = (translations : AeonTranslations[]) => {
     for (const item of translations) {
       if (allItemTranslations.has(item.Id)) {
-        console.error(`Item ${item.USen} of ID ${item.Id} already exists as ${allItemTranslations.get(item.Id)!.USen}`)
-        process.exit(1)
+        throw new Error(`Item ${item.USen} of ID ${item.Id} already exists as ${allItemTranslations.get(item.Id)!.USen}`)
       }
       allItemTranslations.set(item.Id, item)
 
       if (nameToAeonId.has(item.USen)) {
-        console.error(`Item ${item.USen} already exists as ID ${nameToAeonId.get(item.USen)}`)
-        process.exit(1)
+        throw new Error(`Item ${item.USen} already exists as ID ${nameToAeonId.get(item.USen)}`)
       }
       nameToAeonId.set(LowercaseName(item.USen), item.Id)
     }
   }
 
-  // All Adjective Translations go here.
-  // Map AeonItemId -> Map USen -> Translations object
-  const allAdjectiveVariantTranslations = new Map<string, Map<string, AeonTranslations>>()
-  const allAdjectivePatternTranslations = new Map<string, Map<string, AeonTranslations>>()
-
   const nonSpecialCategories = [
+    'Art',
     'Bug Models',
+    'Bugs',
+    'Crafting Items',
     'Dishes',
     'Door Deco',
+    'Etc',
+    'Event Items',
+    'Fencing',
     'Fish Models',
+    'Fish',
     'Floors',
     'Fossils',
     'Furniture',
     'Gyroids',
+    'Money',
     'Music',
+    'Plants',
     'Posters',
     'Rugs',
+    'Sea Creatures',
+    'Shells',
+    'Tools',
+    'Turnips',
     'Umbrellas',
     'Wallpaper'
   ]
   addTranslations(await OpenAeons(nonSpecialCategories))
+
+  // All Adjective Translations go here.
+  // Map AeonItemId -> Map USen -> Translations object
+  const allAdjectiveVariantTranslations = new Map<string, Map<string, AeonTranslations>>()
+  const allAdjectivePatternTranslations = new Map<string, Map<string, AeonTranslations>>()
 
   for (const item of (await OpenAeon('Item Variant Names'))) {
     const ids = item.Id.split('_')
@@ -125,29 +120,10 @@ async function main () {
     mp.set(item.USen, item)
   }
 
-  // Special cases: Some items are plural, others aren't
-  const somePluralCategories = [
-    'Crafting Items', // TODO: Reconcile because some Crafting Items have similar English names
-    'Etc', // TODO: Reconcile, some use plural while others use singular
-    'Event Items', // TODO: Some use plural others use singular
-    'Fencing', // TODO: Reconcile: use singular
-    'Money',
-    'Plants',
-    'Shells',
-    'Tools',
-    'Turnips'
-  ]
-  addTranslations(await OpenAeons(somePluralCategories))
-
-  const critters = [
-    'Bugs',
-    'Fish',
-    'Sea Creatures'
-  ]
-  addTranslations(await OpenAeons(critters))
-
-  // Special cases: Photos
-  const photoVariants = allAdjectiveVariantTranslations.get('Bromide_06426')! // The only one whose value is in the JSON
+  // Special cases: Photos.
+  // Because all Photo Items have the same variants, only one Photo Item's variants are encoded in the CSV.
+  // That item is Bromide_06426.
+  const photoVariants = allAdjectiveVariantTranslations.get('Bromide_06426')!
   for (const photoItem of await OpenAeon('Photos')) {
     addTranslations([photoItem])
     const localVariants = new Map()
@@ -157,11 +133,19 @@ async function main () {
     allAdjectiveVariantTranslations.set(photoItem.Id, localVariants)
   }
 
-  // Special cases: Art
-  addTranslations(await OpenAeon('Art'))
-
   // Read data from Clothing
-  const clothingCategories = ['Accessories', 'Bags', 'Bottoms', 'Caps', 'Dress-Up', 'Handbags', 'Helmets', 'Shoes', 'Socks', 'Tops', 'Wetsuits']
+  const clothingCategories = ['Accessories',
+    'Bags',
+    'Bottoms',
+    'Caps',
+    'Dress-Up',
+    'Handbags',
+    'Helmets',
+    'Shoes',
+    'Socks',
+    'Tops',
+    'Wetsuits'
+  ]
   const clothingItems = await OpenAeons(clothingCategories)
   addTranslations(clothingItems)
 
@@ -183,7 +167,7 @@ async function main () {
   // Iterating through the new translations...
   const newTranslations = new Map<string, TranslationsType>()
 
-  for (const locale of Locales) {
+  for (const locale of LOCALES) {
     console.log(`Working at locale ${locale}`)
     const localTranslations : TranslationsType = {
       items: new Map(),
@@ -193,7 +177,7 @@ async function main () {
 
     // Let's roll per item
     for (const [aeonItemId, translations] of allItemTranslations) {
-      const nookExchangeId = NameToNookExchangeId.get(LowercaseName(translations.USen))
+      const nookExchangeId = nameToNookExchangeId.get(LowercaseName(translations.USen))
       if (nookExchangeId === undefined) {
         console.error(`Cannot find appropriate Nook Exchange ID for ${translations.USen}, skipping...`)
         continue
@@ -206,21 +190,21 @@ async function main () {
 
       localTranslations.items.set(nookExchangeId, {
         item: CapitalizeName(GetTranslation(translations, locale)),
-        adjectives: (() : (string[] | string[][] | undefined) => {
-          const variantType = VariantsTypeOf(nookExchangeItem)
+        adjectives: (() : (string[] | [string[], string[]] | undefined) => {
           const originalAdjectives = NookExchangeAdjectives.get(nookExchangeId)
 
-          switch (variantType) {
-            case VariantsType.OneVariant:
+          switch (nookExchangeItem.variants.length) {
+            case 0:
               return undefined
-            case VariantsType.SingleAdjective:
-              return originalAdjectives
-                ?.map(val =>
-                  GetTranslation(allAdjectiveVariantTranslations
-                    .get(aeonItemId)!
-                    .get(val as string) as AeonTranslations,
-                  locale))
-            case VariantsType.DoubleAdjective: {
+            case 1:
+              // This can return undefined. Special case: nookExchangeId == 2374 (Lost Item)
+              // Reports variants = [3] but the CSV files say nothing about such variants!
+              return originalAdjectives?.map(val =>
+                GetTranslation(allAdjectiveVariantTranslations
+                  .get(aeonItemId)!
+                  .get(val as string) as AeonTranslations,
+                locale))
+            case 2: {
               const variantTranslations = originalAdjectives![0] as string[]
               const patternTranslations = originalAdjectives![1] as string[]
               return [
@@ -262,22 +246,6 @@ async function OpenAeon (name : string) : Promise<Array<AeonTranslations>> {
 
 async function OpenAeons (names : Array<string>) : Promise<AeonTranslations[]> {
   return (await Promise.all(names.map(name => OpenAeon(name)))).reduce((a, b) => a.concat(b))
-}
-
-async function ReadVillagerData () {
-  // Read villager data
-  const villagers = await AeonParser(`${AEON_CSV_DIR}/Villagers.csv`)
-  for (const villager of villagers) {
-    if (villager.EUes !== villager.USes) {
-      console.log(`Villager ${villager.USen} has European Spanish name ${villager.EUes} and American Spanish name ${villager.USes}`)
-    }
-    if (villager.EUen !== villager.USen) {
-      console.log(`Villager ${villager.USen} has European English name ${villager.EUen} and American English name ${villager.USen}`)
-    }
-    if (villager.EUfr !== villager.USfr) {
-      console.log(`Villager ${villager.USen} has European French name ${villager.EUfr} and American French name ${villager.USfr}`)
-    }
-  }
 }
 
 main()
