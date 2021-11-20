@@ -9,7 +9,7 @@
 
 import { readFileSync } from 'fs'
 
-export interface Items {
+export interface Item {
   id: number;
   name: string;
   category: string;
@@ -28,21 +28,21 @@ export interface Items {
 // and asserts the results of JSON.parse at runtime
 export class Convert {
   // Returns the items mapped using their IDs
-  public static fileToItems (filename : string) : Map<number, Items> {
+  public static fileToItems (filename : string) : Map<number, Item> {
     return Convert.toItems(readFileSync(filename).toString())
   }
 
-  public static toItems (json: string): Map<number, Items> {
+  public static toItems (json: string): Map<number, Item> {
     return oldToNew(cast(JSON.parse(json), a(r('Items'))))
   }
 
-  public static itemsToJson (value: Map<number, Items>): string {
+  public static itemsToJson (value: Map<number, Item>): string {
     return JSON.stringify(uncast(newToOld(value), a(r('Items'))), null, 2)
   }
 }
 
-function oldToNew (items : Items[]) : Map<number, Items> {
-  const result = new Map<number, Items>()
+function oldToNew (items : Item[]) : Map<number, Item> {
+  const result = new Map<number, Item>()
   items.forEach(item => {
     if (result.has(item.id)) {
       throw new Error(`item ID ${item.id} already exists as ${result.get(item.id)?.name}`)
@@ -52,7 +52,7 @@ function oldToNew (items : Items[]) : Map<number, Items> {
   return result
 }
 
-function newToOld (items : Map<number, Items>) : Items[] {
+function newToOld (items : Map<number, Item>) : Item[] {
   const result = Array.from(items.values())
   return result.sort((a, b) => a.name.localeCompare(b.name))
 }

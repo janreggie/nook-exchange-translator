@@ -1,4 +1,4 @@
-import { Convert as ItemsConvert, Items as ItemsType } from './json-parser/Items'
+import { Convert as ItemsConvert, Item as ItemType } from './json-parser/Items'
 import { Convert as TranslationsConvert, Translations as TranslationsType } from './json-parser/Translations'
 import { Convert as AdjectivesConvert, Adjectives as AdjectivesType } from './json-parser/Adjectives'
 import { AeonTranslations, GetTranslation, Parser as AeonParser } from './aeon-parser'
@@ -12,7 +12,7 @@ const LOCALES = ['de', 'en-gb', 'es-eu', 'es-us', 'fr-eu', 'fr-us', 'it', 'ja', 
 
 async function main () {
   // Read Nook Exchange data. Mapped using their Nook Exchange ID
-  const NookExchangeItems : Map<number, ItemsType> = ItemsConvert.fileToItems(`${OLD_JSON_DIR}/items.json`)
+  const NookExchangeItems : Map<number, ItemType> = ItemsConvert.fileToItems(`${OLD_JSON_DIR}/items.json`)
   const NookExchangeAdjectives : Map<number, AdjectivesType> = AdjectivesConvert.fileToAdjectives(`${OLD_JSON_DIR}/variants.json`)
   const nameToNookExchangeId = new Map<string, number>()
   for (const [k, v] of NookExchangeItems.entries()) {
