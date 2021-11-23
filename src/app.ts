@@ -163,13 +163,11 @@ async function main () {
   // Write down the new Translations
   for (const locale of LOCALES) {
     console.log(`Working at locale ${locale}`)
+    const localize = (translations : AeonTranslations) => CapitalizeName(GetTranslation(translations, locale))
     const localTranslations : TranslationsType = {
       items: new Map(),
       materials: new Map()
     }
-
-    // Returns the local name of some AeonTranslations object
-    const localize = (translations : AeonTranslations) => CapitalizeName(GetTranslation(translations, locale))
 
     // Iterate for every Item that exists both in the Aeon CSVs and Nook Exchange JSON
     for (const [aeonItemId, aeonTranslations] of allItemTranslations) {
@@ -184,33 +182,36 @@ async function main () {
         throw new Error(`No Nook Exchange Item for ID ${nookExchangeId}, ${aeonTranslations.USen}`)
       }
 
-      localTranslations.items.set(nookExchangeId, {
-        item: localize(aeonTranslations),
-        adjectives: (() : (AdjectivesType | undefined) => {
-          const originalAdjectives = NookExchangeAdjectives.get(nookExchangeId)
-          if (originalAdjectives === undefined) { return undefined }
+      const localizedItem = localize(aeonTranslations)
+      const localizedAdjectives = (() : (AdjectivesType | undefined) => {
+        const originalAdjectives = NookExchangeAdjectives.get(nookExchangeId)
+        if (originalAdjectives === undefined) { return undefined }
 
-          switch (nookExchangeItem.variants.length) {
-            case 0:
-              return undefined
+        switch (nookExchangeItem.variants.length) {
+          case 0:
+            return undefined
 
-            case 1: {
-              const aeonVariants = allAdjectiveVariantTranslations.get(aeonItemId)!
-              return (originalAdjectives as string[]).map(variant => localize(aeonVariants.get(variant)!))
-            }
-
-            case 2: {
-              const originalVariants = (originalAdjectives as [string[], string[]])[0]
-              const originalPatterns = (originalAdjectives as [string[], string[]])[1]
-              const aeonVariants = allAdjectiveVariantTranslations.get(aeonItemId)!
-              const aeonPatterns = allAdjectivePatternTranslations.get(aeonItemId)!
-              return [
-                originalVariants.length <= 1 ? [''] : (originalVariants).map(variant => localize(aeonVariants.get(variant)!)),
-                originalPatterns.length <= 1 ? [''] : (originalPatterns).map(pattern => localize(aeonPatterns.get(pattern)!))
-              ]
-            }
+          case 1: {
+            const aeonVariants = allAdjectiveVariantTranslations.get(aeonItemId)!
+            return (originalAdjectives as string[]).map(variant => localize(aeonVariants.get(variant)!))
           }
-        })()
+
+          case 2: {
+            const originalVariants = (originalAdjectives as [string[], string[]])[0]
+            const originalPatterns = (originalAdjectives as [string[], string[]])[1]
+            const aeonVariants = allAdjectiveVariantTranslations.get(aeonItemId)!
+            const aeonPatterns = allAdjectivePatternTranslations.get(aeonItemId)!
+            return [
+              originalVariants.length === 1 ? [''] : (originalVariants).map(variant => localize(aeonVariants.get(variant)!)),
+              originalPatterns.length === 1 ? [''] : (originalPatterns).map(pattern => localize(aeonPatterns.get(pattern)!))
+            ]
+          }
+        }
+      })()
+
+      localTranslations.items.set(nookExchangeId, {
+        item: localizedItem,
+        adjectives: localizedAdjectives
       })
     }
 
