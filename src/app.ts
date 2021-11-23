@@ -43,7 +43,7 @@ async function main () {
 
     const name = LowercaseName(translation.USen)
     if (nameToAeonId.has(name)) {
-      throw new Error(`Item ${name} already exists as ID ${nameToAeonId.get(name)}`)
+      throw new Error(`In inserting ${translation.Id}, item ${name} already exists as ID ${nameToAeonId.get(name)}`)
     }
     nameToAeonId.set(name, translation.Id)
   }
@@ -161,14 +161,12 @@ async function main () {
   }
 
   // Write down the new Translations
-  const newTranslations = new Map<string, TranslationsType>() // Locale -> Translations for some locale
   for (const locale of LOCALES) {
     console.log(`Working at locale ${locale}`)
     const localTranslations : TranslationsType = {
       items: new Map(),
       materials: new Map()
     }
-    newTranslations.set(locale, localTranslations)
 
     // Returns the local name of some AeonTranslations object
     const localize = (translations : AeonTranslations) => CapitalizeName(GetTranslation(translations, locale))
